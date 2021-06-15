@@ -44,17 +44,21 @@
 		<data>
 		+2/8p9GFNe8hKe+xn7npQmqIOSI=
 		</data>
+		<key>Headers/MqttInstance.h</key>
+		<data>
+		EmHAtgyTczbfyf8OlnvruvhMCdk=
+		</data>
 		<key>Headers/SinovoBle.h</key>
 		<data>
 		AOxyk2Fh63AA/gkWM9PUa9DM0YE=
 		</data>
 		<key>Headers/iosSinovoLib.h</key>
 		<data>
-		4JQKpIf5S456OznwrGtZWyIInVU=
+		CjYY3NwGI7cPw5A0i0KQpgaQ2hA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/ytxjWgpG3Y3mG9Zz39rCD6PtVI=
+		awuvYeT3QzuB88EwgDTsVN0ucD4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -190,6 +194,17 @@
 			c6wgHcDy/dk19CGoGVG0oHF/EnYAL2t3WcGCH+J95Co=
 			</data>
 		</dict>
+		<key>Headers/MqttInstance.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			EmHAtgyTczbfyf8OlnvruvhMCdk=
+			</data>
+			<key>hash2</key>
+			<data>
+			TaMyxfscvlUeOda5pKpgsVmjRW0ZdAxt0j+21McICrI=
+			</data>
+		</dict>
 		<key>Headers/SinovoBle.h</key>
 		<dict>
 			<key>hash</key>
@@ -205,11 +220,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4JQKpIf5S456OznwrGtZWyIInVU=
+			CjYY3NwGI7cPw5A0i0KQpgaQ2hA=
 			</data>
 			<key>hash2</key>
 			<data>
-			qy6S1Yi2/DkjAxPruSHH+sssVWBHfzzQu517aec+/yE=
+			s/Pw8Epai9EObrmNdujxeFN85fOS5F5HwfchJgoUjEo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

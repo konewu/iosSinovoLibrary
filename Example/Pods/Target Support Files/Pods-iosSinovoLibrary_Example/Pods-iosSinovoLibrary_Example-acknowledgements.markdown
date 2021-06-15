@@ -1,6 +1,15 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## IMSLog
+
+Alibaba-INC copyright
+
+## IotLinkKit
+
+Alibaba-Inc copyright
+
+
 ## iosSinovoLibrary
 
 Copyright (c) 2021 konewu <379301272@qq.com>

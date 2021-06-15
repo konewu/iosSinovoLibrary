@@ -25,24 +25,6 @@ FOUNDATION_EXPORT const unsigned char iosSinovoLibVersionString[];
 
 #import <iosSinovoLib/MqttInstance.h>
 
-#import <iosSinovoLib/AlinkIoTExpress.h>
-#import <iosSinovoLib/LKIoTExpress.h>
-//#import <iosSinovoLib/LKIoTExpressEnvSet.h>
-#import <iosSinovoLib/NSError+LKExpUtils.h>
-
-//#import <iosSinovoLib/AlinkMobileGateway.h>
-#import <iosSinovoLib/LKIoTGatewayLine.h>
-//#import <iosSinovoLib/LKMgwEnvSet.h>
-//#import <iosSinovoLib/LKMobileGateway.h>
-
-#import <iosSinovoLib/IotLinkKit.h>
-#import <iosSinovoLib/LinkkitDefine.h>
-#import <iosSinovoLib/LinkKitEntry.h>
-//#import <iosSinovoLib/LinkKitGateway.h>
-
-
-#import <iosSinovoLib/IMSLog.h>
-#import <iosSinovoLib/IMSLogMacros.h>
 
 
 

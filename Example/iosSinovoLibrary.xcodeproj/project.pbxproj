@@ -24,7 +24,14 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		A3EB88108AA98B4929F9CD7B /* Pods_iosSinovoLibrary_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D3880DA0F6E89F1C6A3C9E /* Pods_iosSinovoLibrary_Tests.framework */; };
-		BE41408B2678457B0020EA0B /* iosSinovoLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE41408A2678457B0020EA0B /* iosSinovoLib.framework */; };
+		BE41409626784CC70020EA0B /* GWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE41408E26784CC60020EA0B /* GWViewController.m */; };
+		BE41409726784CC70020EA0B /* MQTTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE41409226784CC70020EA0B /* MQTTViewController.m */; };
+		BE41409826784CC70020EA0B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE41409326784CC70020EA0B /* ViewController.m */; };
+		BE41409926784CC70020EA0B /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE41409426784CC70020EA0B /* HomeViewController.m */; };
+		BE4140A226784CFB0020EA0B /* BusinessData.m in Sources */ = {isa = PBXBuildFile; fileRef = BE41409A26784CFA0020EA0B /* BusinessData.m */; };
+		BE4140A326784CFB0020EA0B /* mqttCallBack.m in Sources */ = {isa = PBXBuildFile; fileRef = BE41409B26784CFA0020EA0B /* mqttCallBack.m */; };
+		BE4140A426784CFB0020EA0B /* SinovoBleCallBack.m in Sources */ = {isa = PBXBuildFile; fileRef = BE41409E26784CFB0020EA0B /* SinovoBleCallBack.m */; };
+		BE4140A526784CFB0020EA0B /* httpCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4140A126784CFB0020EA0B /* httpCallback.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +74,22 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89A6EB8CEA544D8C556E84F6 /* Pods_iosSinovoLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosSinovoLibrary_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D3880DA0F6E89F1C6A3C9E /* Pods_iosSinovoLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosSinovoLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE41408A2678457B0020EA0B /* iosSinovoLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iosSinovoLib.framework; sourceTree = "<group>"; };
+		BE41408E26784CC60020EA0B /* GWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWViewController.m; sourceTree = "<group>"; };
+		BE41408F26784CC60020EA0B /* GWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWViewController.h; sourceTree = "<group>"; };
+		BE41409026784CC60020EA0B /* MQTTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MQTTViewController.h; sourceTree = "<group>"; };
+		BE41409126784CC60020EA0B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BE41409226784CC70020EA0B /* MQTTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MQTTViewController.m; sourceTree = "<group>"; };
+		BE41409326784CC70020EA0B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BE41409426784CC70020EA0B /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		BE41409526784CC70020EA0B /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		BE41409A26784CFA0020EA0B /* BusinessData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessData.m; sourceTree = "<group>"; };
+		BE41409B26784CFA0020EA0B /* mqttCallBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mqttCallBack.m; sourceTree = "<group>"; };
+		BE41409C26784CFA0020EA0B /* SinovoBleCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinovoBleCallBack.h; sourceTree = "<group>"; };
+		BE41409D26784CFB0020EA0B /* httpCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httpCallback.h; sourceTree = "<group>"; };
+		BE41409E26784CFB0020EA0B /* SinovoBleCallBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinovoBleCallBack.m; sourceTree = "<group>"; };
+		BE41409F26784CFB0020EA0B /* BusinessData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessData.h; sourceTree = "<group>"; };
+		BE4140A026784CFB0020EA0B /* mqttCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mqttCallBack.h; sourceTree = "<group>"; };
+		BE4140A126784CFB0020EA0B /* httpCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = httpCallback.m; sourceTree = "<group>"; };
 		FAA177AB2ECD4168A19622DC /* iosSinovoLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = iosSinovoLibrary.podspec; path = ../iosSinovoLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
@@ -76,7 +98,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE41408B2678457B0020EA0B /* iosSinovoLib.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -133,7 +154,6 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BE41408A2678457B0020EA0B /* iosSinovoLib.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -147,6 +167,8 @@
 		6003F593195388D20070C39A /* Example for iosSinovoLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				BE41408D26784C630020EA0B /* Delegate */,
+				BE41408C26784C5C0020EA0B /* UI */,
 				6003F59C195388D20070C39A /* IOAppDelegate.h */,
 				6003F59D195388D20070C39A /* IOAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -200,6 +222,36 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		BE41408C26784C5C0020EA0B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BE41408F26784CC60020EA0B /* GWViewController.h */,
+				BE41408E26784CC60020EA0B /* GWViewController.m */,
+				BE41409526784CC70020EA0B /* HomeViewController.h */,
+				BE41409426784CC70020EA0B /* HomeViewController.m */,
+				BE41409026784CC60020EA0B /* MQTTViewController.h */,
+				BE41409226784CC70020EA0B /* MQTTViewController.m */,
+				BE41409126784CC60020EA0B /* ViewController.h */,
+				BE41409326784CC70020EA0B /* ViewController.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		BE41408D26784C630020EA0B /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BE41409F26784CFB0020EA0B /* BusinessData.h */,
+				BE41409A26784CFA0020EA0B /* BusinessData.m */,
+				BE41409D26784CFB0020EA0B /* httpCallback.h */,
+				BE4140A126784CFB0020EA0B /* httpCallback.m */,
+				BE4140A026784CFB0020EA0B /* mqttCallBack.h */,
+				BE41409B26784CFA0020EA0B /* mqttCallBack.m */,
+				BE41409C26784CFA0020EA0B /* SinovoBleCallBack.h */,
+				BE41409E26784CFB0020EA0B /* SinovoBleCallBack.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,7 +263,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				A8EBAD648E37BCB8DBE30985 /* [CP] Embed Pods Frameworks */,
+				727A9D926A8232430B300DF0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,22 +376,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A8EBAD648E37BCB8DBE30985 /* [CP] Embed Pods Frameworks */ = {
+		727A9D926A8232430B300DF0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-iosSinovoLibrary_Example/Pods-iosSinovoLibrary_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/iosSinovoLibrary/iosSinovoLibrary.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-iosSinovoLibrary_Example/Pods-iosSinovoLibrary_Example-resources.sh",
+				"${PODS_ROOT}/IotLinkKit/iot-linkkit/AlinkIoTExpress.framework/cafile.bundle",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iosSinovoLibrary.framework",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cafile.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iosSinovoLibrary_Example/Pods-iosSinovoLibrary_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iosSinovoLibrary_Example/Pods-iosSinovoLibrary_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E0FC56A24F544D959A87AE86 /* [CP] Check Pods Manifest.lock */ = {
@@ -371,9 +423,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE41409826784CC70020EA0B /* ViewController.m in Sources */,
 				6003F59E195388D20070C39A /* IOAppDelegate.m in Sources */,
+				BE4140A426784CFB0020EA0B /* SinovoBleCallBack.m in Sources */,
+				BE4140A526784CFB0020EA0B /* httpCallback.m in Sources */,
 				6003F5A7195388D20070C39A /* IOViewController.m in Sources */,
+				BE4140A326784CFB0020EA0B /* mqttCallBack.m in Sources */,
+				BE41409726784CC70020EA0B /* MQTTViewController.m in Sources */,
+				BE41409626784CC70020EA0B /* GWViewController.m in Sources */,
+				BE41409926784CC70020EA0B /* HomeViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				BE4140A226784CFB0020EA0B /* BusinessData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

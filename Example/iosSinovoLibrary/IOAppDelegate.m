@@ -7,12 +7,21 @@
 //
 
 #import "IOAppDelegate.h"
+#import "HomeViewController.h"
 #import <iosSinovoLib/iosSinovoLib.h>
 
 @implementation IOAppDelegate
+IOAppDelegate *myDelegate;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    myDelegate = (IOAppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:[HomeViewController new]];
+    self.window.rootViewController = navigationController;
+    navigationController.navigationBarHidden = NO;
+    [self.window makeKeyAndVisible];
+    
     // Override point for customization after application launch.
     [ESP_NetUtil tryOpenNetworkPermission];
     return YES;

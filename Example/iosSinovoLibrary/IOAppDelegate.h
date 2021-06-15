@@ -10,6 +10,10 @@
 
 @interface IOAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UIWindow     *window;
+@property (strong, nonatomic) UILabel      *bluestatusLb;
+@property (strong, nonatomic) UILabel      *blestatusLb;
+@property (strong, nonatomic) UILabel      *mqttstatusLb;
+@property (strong, nonatomic) UITextView   *resultTV;
 
 @end
