@@ -7,12 +7,14 @@
 //
 
 #import "IOAppDelegate.h"
+#import <iosSinovoLib/iosSinovoLib.h>
 
 @implementation IOAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [ESP_NetUtil tryOpenNetworkPermission];
     return YES;
 }
 

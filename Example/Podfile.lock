@@ -1,0 +1,16 @@
+PODS:
+  - iosSinovoLibrary (0.1.0)
+
+DEPENDENCIES:
+  - iosSinovoLibrary (from `../`)
+
+EXTERNAL SOURCES:
+  iosSinovoLibrary:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  iosSinovoLibrary: 70e94a8e548819d341707dc98dd632708f3b9e1c
+
+PODFILE CHECKSUM: d9e11017507ad45b0bd5f8851b27b233bdb5d000
+
+COCOAPODS: 1.10.1

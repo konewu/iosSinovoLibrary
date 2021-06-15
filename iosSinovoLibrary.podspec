@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'iosSinovoLibrary'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of iosSinovoLibrary.'
+  s.summary          = 'iosSinovoLibrary for ble and mqtt'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -26,17 +26,18 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'konewu' => '379301272@qq.com' }
   s.source           = { :git => 'https://github.com/konewu/iosSinovoLibrary.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'iosSinovoLibrary/Classes/**/*'
+  
+  s.vendored_frameworks = 'iosSinovoLibrary/Frameworks/iosSinovoLib.framework'
   
   # s.resource_bundles = {
   #   'iosSinovoLibrary' => ['iosSinovoLibrary/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

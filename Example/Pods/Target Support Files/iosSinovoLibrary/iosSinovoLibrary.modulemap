@@ -1,0 +1,6 @@
+framework module iosSinovoLibrary {
+  umbrella header "iosSinovoLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

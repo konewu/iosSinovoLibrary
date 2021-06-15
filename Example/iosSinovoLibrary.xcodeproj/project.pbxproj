@@ -24,6 +24,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		A3EB88108AA98B4929F9CD7B /* Pods_iosSinovoLibrary_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D3880DA0F6E89F1C6A3C9E /* Pods_iosSinovoLibrary_Tests.framework */; };
+		BE41408B2678457B0020EA0B /* iosSinovoLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE41408A2678457B0020EA0B /* iosSinovoLib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06D2BAA37A390F9B34E7CB87 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		06D2BAA37A390F9B34E7CB87 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		15C14F1DFCAD2EEE5952BDBB /* Pods-iosSinovoLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosSinovoLibrary_Example.debug.xcconfig"; path = "Target Support Files/Pods-iosSinovoLibrary_Example/Pods-iosSinovoLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		22EB38EEC9EC355A6C6A8B19 /* Pods-iosSinovoLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosSinovoLibrary_Example.release.xcconfig"; path = "Target Support Files/Pods-iosSinovoLibrary_Example/Pods-iosSinovoLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2825D83D9A61BF8B0423CAA1 /* Pods-iosSinovoLibrary_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosSinovoLibrary_Tests.debug.xcconfig"; path = "Target Support Files/Pods-iosSinovoLibrary_Tests/Pods-iosSinovoLibrary_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2DC8F36F4FEE80301F17A233 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2DC8F36F4FEE80301F17A233 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2E3D4C863A83503D90A40FEE /* Pods-iosSinovoLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosSinovoLibrary_Tests.release.xcconfig"; path = "Target Support Files/Pods-iosSinovoLibrary_Tests/Pods-iosSinovoLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* iosSinovoLibrary_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSinovoLibrary_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -66,7 +67,8 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89A6EB8CEA544D8C556E84F6 /* Pods_iosSinovoLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosSinovoLibrary_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D3880DA0F6E89F1C6A3C9E /* Pods_iosSinovoLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosSinovoLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAA177AB2ECD4168A19622DC /* iosSinovoLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = iosSinovoLibrary.podspec; path = ../iosSinovoLibrary.podspec; sourceTree = "<group>"; };
+		BE41408A2678457B0020EA0B /* iosSinovoLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iosSinovoLib.framework; sourceTree = "<group>"; };
+		FAA177AB2ECD4168A19622DC /* iosSinovoLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = iosSinovoLibrary.podspec; path = ../iosSinovoLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE41408B2678457B0020EA0B /* iosSinovoLib.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -103,7 +106,6 @@
 				2825D83D9A61BF8B0423CAA1 /* Pods-iosSinovoLibrary_Tests.debug.xcconfig */,
 				2E3D4C863A83503D90A40FEE /* Pods-iosSinovoLibrary_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,6 +133,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE41408A2678457B0020EA0B /* iosSinovoLib.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -248,6 +251,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = konewu;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 8923RQ2X36;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +264,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -494,6 +501,11 @@
 			baseConfigurationReference = 15C14F1DFCAD2EEE5952BDBB /* Pods-iosSinovoLibrary_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8923RQ2X36;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iosSinovoLibrary/iosSinovoLibrary-Prefix.pch";
 				INFOPLIST_FILE = "iosSinovoLibrary/iosSinovoLibrary-Info.plist";
@@ -510,6 +522,11 @@
 			baseConfigurationReference = 22EB38EEC9EC355A6C6A8B19 /* Pods-iosSinovoLibrary_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8923RQ2X36;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iosSinovoLibrary/iosSinovoLibrary-Prefix.pch";
 				INFOPLIST_FILE = "iosSinovoLibrary/iosSinovoLibrary-Info.plist";
