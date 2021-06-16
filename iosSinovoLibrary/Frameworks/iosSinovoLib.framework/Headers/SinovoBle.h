@@ -67,40 +67,32 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSTimer *bindTimer;           //添加锁的时候，超时检测
 @property (nonatomic, copy) BleLock *connectingBleLock;
 
-//初始化蓝牙
 - (CBCentralManager *) centralInit;
 
-//- (void) sendData :(NSData *)data;
-- (void) bleScanOnly;
+- (void) bleScanOnly;    //just ble scan, not automatically connect
 - (void) cancelConnectLock ;  
-- (void) connectLockViaQRCode :(NSString *)qrcode :(NSString *)userIMEI;   //参数为 需要连接的锁的二维码
+- (void) connectLockViaQRCode :(NSString *)qrcode :(NSString *)userIMEI;
 - (void) connectLockViaMacSno :(NSMutableArray *)autoConnectLockList;
 
-- (void) addUser :(NSString *)username ;
-- (void) updateUserName :(NSString *)username :(NSString *)userNID ;
-- (void) addDataForUser :(NSString *)userNID :(NSString *)dataType :(NSString *)data ;
-- (void) delData :(NSString *)dataType :(NSString *)delID ;
-- (void) resetCode :(NSString *)userNID :(NSString *)codeType :(NSString *)codeID :(NSString *)newCode ;
-- (void) setLockInfo :(int)dataType :(NSString *)data ;
-- (void) getLockInfo :(int)dataType ;
-- (void) getAllUsers ;
-- (void) getLog :(NSString *)logID ;
-- (void) doDynamicCode :(NSString *)code :(NSString *)enable;
-- (void) updateCodeType :(NSString *)oldCodeType :(NSString *)codeID :(NSString *)newCodeType;
-- (void) verifyCode :(NSString *)code ;
-- (void) toUnlock :(NSString *)dataType :(NSString *)code ;
-- (NSString *) getUnlockData :(NSString *)code ;        //获取开门的数据，主要用于多把锁绑定于网关下进行联动开门
-- (void) cleanData :(NSString *)dataType ;
+- (void) addUser :(NSString *)username :(NSString *)lockSNO ;
+- (void) updateUserName :(NSString *)username :(NSString *)userNID :(NSString *)lockSNO ;
+- (void) addDataForUser :(NSString *)userNID :(NSString *)dataType :(NSString *)data :(NSString *)lockSNO ;
+- (void) delData :(NSString *)dataType :(NSString *)delID :(NSString *)lockSNO ;
+- (void) resetCode :(NSString *)userNID :(NSString *)codeType :(NSString *)codeID :(NSString *)newCode :(NSString *)lockSNO ;
+- (void) setLockInfo :(int)dataType :(NSString *)data :(NSString *)lockSNO ;
+- (void) getLockInfo :(int)dataType :(NSString *)lockSNO ;
+- (void) getAllUsers :(NSString *)lockSNO ;
+- (void) getLog :(NSString *)logID :(NSString *)lockSNO ;
+- (void) doDynamicCode :(NSString *)code :(NSString *)enable :(NSString *)lockSNO ;
+- (void) updateCodeType :(NSString *)oldCodeType :(NSString *)codeID :(NSString *)newCodeType :(NSString *)lockSNO ;
+- (void) verifyCode :(NSString *)code :(NSString *)lockSNO ;
+- (void) toUnlock :(NSString *)dataType :(NSString *)code :(NSString *)lockSNO ;
+- (NSString *) getUnlockData :(NSString *)code :(NSString *)lockSNO ;        //获取开门的数据，主要用于多把锁绑定于网关下进行联动开门
+- (void) cleanData :(NSString *)dataType :(NSString *)lockSNO ;
 - (void) toDisconnBle ;
 
-//-(void) setLockMac :(NSString*)mac;
-//-(void) setLockSno :(NSString*)sno;
-//
-//-(NSString *) getLockMac ;
-//-(NSString *) getLockSno ;
-
--(void) startToDFU ;    //开始进行升级 , 扫描的 uuid 为dfu的 uuid FE59
--(void) finishiDFU ;    //升级完成，需要通知库， 这样才能重新进行自动连接
+-(void) startToDFU ;    //start to DFU , firmware update
+-(void) finishiDFU ;    //finish DFU,
 
 //实例化mqtt 对象
 +(instancetype) sharedBLE;

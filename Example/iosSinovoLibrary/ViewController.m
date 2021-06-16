@@ -214,6 +214,7 @@ UITextField *snoTF;
     NSMutableArray *connectList = [[NSMutableArray alloc] init];
     [connectList addObject:mylock];
 
+    myDelegate.lockSno = sno;
     [[SinovoBle sharedBLE] connectLockViaMacSno :connectList];
 }
 

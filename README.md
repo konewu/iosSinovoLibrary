@@ -11,6 +11,16 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+1、In order for the app to be able to access Bluetooth，Info.plist  must  add  the following settings
+        a、Privacy - Bluetooth Always Usage Description
+        b、Privacy - Bluetooth Peripheral Usage Description
+2、In order for the app to be able to access WIFI information，
+      a、 Add capability  [Access Wifi Information] on  TARGETS
+      b、Info.plist  must  add  the following settings
+            1、Privacy - Location Always and When In Use Usage Description
+            2、Privacy - Location When In Use Usage Description
+            3、Privacy - Location Usage Description
+
 ## Installation
 
 iosSinovoLibrary is available through [CocoaPods](https://cocoapods.org). To install

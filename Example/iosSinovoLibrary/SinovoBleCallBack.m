@@ -188,16 +188,7 @@ extern IOAppDelegate *myDelegate;
         myDelegate.blestatusLb.textColor = [UIColor blueColor];
         
         //自动连接成功，获取锁的相关属性
-        [[SinovoBle sharedBLE] getLockInfo :2];
-        [[SinovoBle sharedBLE] getLockInfo :3];
-        [[SinovoBle sharedBLE] getLockInfo :11];
-        [[SinovoBle sharedBLE] getLockInfo :4];
-        [[SinovoBle sharedBLE] getLockInfo :5];
-        [[SinovoBle sharedBLE] getLockInfo :6];
-        [[SinovoBle sharedBLE] getLockInfo :7];
-        [[SinovoBle sharedBLE] getLockInfo :8];
-        [[SinovoBle sharedBLE] getLockInfo :9];
-        [[SinovoBle sharedBLE] getLockInfo :10];
+        [[SinovoBle sharedBLE] getLockInfo :2 :myDelegate.lockSno];
     }
 }
 
@@ -267,7 +258,7 @@ extern IOAppDelegate *myDelegate;
  *  开关门操作
  */
 - (void) openOrClose {
-    [[SinovoBle sharedBLE] toUnlock: @"01" :@""];
+    [[SinovoBle sharedBLE] toUnlock: @"01" :@"" :myDelegate.lockSno];
 }
 
 @end

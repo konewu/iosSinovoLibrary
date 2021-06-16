@@ -41,10 +41,10 @@ BOOL mqttLostAfterLogin = NO;   //mqtt 注册成功之后的 连接丢失记录
     [[MqttInstance sharedMqtt] MqttInit :productKey :deviceName :deviceSecret :region ];
     
     //保存下 mqtt的注册参数
-    self->productKey = productKey;
-    self->deviceName = deviceName;
-    self->deviceSecret = deviceSecret;
-    self->region       = region;
+    self->productKey    = productKey;
+    self->deviceName    = deviceName;
+    self->deviceSecret  = deviceSecret;
+    self->region        = region;
 }
 
 //logout MQTT
@@ -57,12 +57,14 @@ BOOL mqttLostAfterLogin = NO;   //mqtt 注册成功之后的 连接丢失记录
 //Mqtt connect success
 - (void)onConnected { 
     NSLog(@"Mqtt onConnected ，Mqtt connect success,");
+    NSString *result_old = myDelegate.resultTV.text;
+    myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\nMqtt onConnected! Subcribe topic now", result_old];
 }
 
 //MQTT Connection Lost
 - (void)onConnectionLost {
     NSLog(@"Mqtt onConnectionLost");
-   
+    myDelegate.resultTV.text = @"MQTT Connection lost.....";
 }
 
 //MQTT Logout failed
@@ -88,6 +90,9 @@ BOOL mqttLostAfterLogin = NO;   //mqtt 注册成功之后的 连接丢失记录
 //Receive message from MQTT server
 - (void)onMsgArrived:(nonnull NSString *)topic :(nonnull id)msg { 
     NSLog(@"Receive message from MQTT server topic：%@ data:%@", topic, msg);
+    
+    NSString *result_old = myDelegate.resultTV.text;
+    myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\n Receive msg from mqtt: %@", result_old, msg];
 }
 
 //Publish message to MQTT server failed
@@ -110,7 +115,9 @@ BOOL mqttLostAfterLogin = NO;   //mqtt 注册成功之后的 连接丢失记录
 //Data can be sent and received normally after subscribing to the topic
 - (void)onSubcribeFailed {
 
-    NSLog(@"ubcribe topic failed");
+    NSLog(@"subcribe topic failed");
+    NSString *result_old = myDelegate.resultTV.text;
+    myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\n Subcribe topic failed!", result_old];
     
     //try to logout MQTT
     [[MqttInstance sharedMqtt] unSubscriptTopic];
@@ -128,6 +135,9 @@ BOOL mqttLostAfterLogin = NO;   //mqtt 注册成功之后的 连接丢失记录
     NSLog(@"Mqtt Subcribe topic Success");
     
     //do something
+    myDelegate.isMqttLoginOk = YES;
+    NSString *result_old = myDelegate.resultTV.text;
+    myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\n Subcribe topic Success!", result_old];
     
 }
 

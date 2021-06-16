@@ -17,6 +17,7 @@ FOUNDATION_EXPORT const unsigned char iosSinovoLibVersionString[];
 
 #import <iosSinovoLib/SinovoBle.h>
 #import <iosSinovoLib/BleLock.h>
+#import <iosSinovoLib/BleData.h>
 #import <iosSinovoLib/AES128.h>
 #import <iosSinovoLib/ESPTouchTask.h>
 #import <iosSinovoLib/ESP_NetUtil.h>

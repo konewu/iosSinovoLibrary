@@ -2,10 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>The application needs to access the local network, allowing UDP to send broadcasts</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This application uses location permissions to obtain currently connected Wi-Fi information. This application does not collect, store or record any location data.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This application uses location permissions to obtain currently connected Wi-Fi information. This application does not collect, store or record any location data.</string>
+	<key>NSLocationUsageDescription</key>
+	<string>This application uses location permissions to obtain currently connected Wi-Fi information. This application does not collect, store or record any location data.</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>${PRODUCT_NAME}</string>
+	<string>iosSinovoLibrary_Demo</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
@@ -24,6 +32,10 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>App connect lock via bluetooth</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>App connect lock via bluetooth</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

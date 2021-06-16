@@ -8,6 +8,7 @@
 #import "IOAppDelegate.h"
 #import "mqttCallBack.h"
 #import "MQTTViewController.h"
+#import "httpCallback.h"
 #import <iosSinovoLib/iosSinovoLib.h>
 
 @interface MQTTViewController ()
@@ -29,13 +30,13 @@ UITextField *gatewayIDTF;
     //初始化Mqtt
     float blueLbX = 20.0f;
     float blueLbY = 70.0f;
-    float blueLbW = 150.0f;
+    float blueLbW = 120.0f;
     float blueLbH = 30.0f;
     UILabel *blueLb = [[UILabel alloc] initWithFrame:CGRectMake(blueLbX, blueLbY, blueLbW, blueLbH)];
     blueLb.text = @"MQTT status:";
     [self.view addSubview :blueLb];
     
-    myDelegate.mqttstatusLb = [[UILabel alloc] initWithFrame:CGRectMake(blueLbX + 150, blueLbY, 60, blueLbH)];
+    myDelegate.mqttstatusLb = [[UILabel alloc] initWithFrame:CGRectMake(blueLbX + blueLbW, blueLbY, 150, blueLbH)];
     myDelegate.mqttstatusLb.text = @"disconnected";
     myDelegate.mqttstatusLb.textColor = [UIColor darkTextColor];
     [self.view addSubview:myDelegate.mqttstatusLb];
@@ -46,7 +47,7 @@ UITextField *gatewayIDTF;
 
     float line1x = (screenW - line1w)/2;
     UILabel *conQRc = [[UILabel alloc] initWithFrame:CGRectMake(line1x, line1y, line1w, 30.0f)];
-    conQRc.text = @"Register user via Http";
+    conQRc.text = @"User Login";
     conQRc.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:conQRc];
     
@@ -59,7 +60,8 @@ UITextField *gatewayIDTF;
     
     float line1_qrTextfX = line1_qrLabelx + 80;
     accountTF = [[UITextField alloc] initWithFrame:CGRectMake(line1_qrTextfX, line1_qrLabely, 180, 30)];
-    accountTF.placeholder = @"User's account";
+    accountTF.text = @"Test@test.com";
+    accountTF.textAlignment = NSTextAlignmentCenter;
     [self addToolBar:accountTF];
     [self.view addSubview:accountTF];
     
@@ -76,6 +78,8 @@ UITextField *gatewayIDTF;
 
     float line2_qrTextfX = line2_imeix + 80;
     passTF = [[UITextField alloc] initWithFrame:CGRectMake(line2_qrTextfX, line2_imeiy, 180, 30)];
+    passTF.text = @"Test123";
+    passTF.textAlignment = NSTextAlignmentCenter;
     [self addToolBar:passTF];
     [self.view addSubview:passTF];
 
@@ -85,12 +89,13 @@ UITextField *gatewayIDTF;
     
     float btnqry = imeiLabel.frame.origin.y + imeiLabel.frame.size.height +10;
 
+    //register user
     UIButton *connQRBtn = [[UIButton alloc] initWithFrame:CGRectMake(line2_qrTextfX, btnqry, 180, 30)];
-    [connQRBtn setTitle:@"Register mqtt" forState:UIControlStateNormal];
+    [connQRBtn setTitle:@"Login" forState:UIControlStateNormal];
     [connQRBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     connQRBtn.backgroundColor = [UIColor lightGrayColor];
     connQRBtn.userInteractionEnabled = YES;
-    [connQRBtn addTarget:self action:@selector(connViaQrc) forControlEvents:UIControlEventTouchUpInside];
+    [connQRBtn addTarget:self action:@selector(userLogin) forControlEvents:UIControlEventTouchUpInside];
 
     [self.view addSubview:connQRBtn];
     
@@ -106,11 +111,11 @@ UITextField *gatewayIDTF;
     //mac label
     float line2macx = 20.0f;
     float line2macy = line2y + 40.0f;
-    UILabel *macLabel = [[UILabel alloc] initWithFrame:CGRectMake(line2macx, line2macy, 80.0f, 30.0f)];
+    UILabel *macLabel = [[UILabel alloc] initWithFrame:CGRectMake(line2macx, line2macy, 100.0f, 30.0f)];
     macLabel.text = @"Lock Mac:";
     [self.view addSubview:macLabel];
     
-    float line2macTfx = line2macx + 80;
+    float line2macTfx = line2macx + 100;
     lockmacTF = [[UITextField alloc] initWithFrame:CGRectMake(line2macTfx, line2macy, 180, 30)];
     lockmacTF.placeholder = @"lock's mac address";
     [self addToolBar:lockmacTF];
@@ -123,11 +128,11 @@ UITextField *gatewayIDTF;
     //sno label
     float line2snox = 20.0f;
     float line2snoy = macLabel.frame.origin.y + macLabel.frame.size.height + 10;
-    UILabel *snoLabel = [[UILabel alloc] initWithFrame:CGRectMake(line2snox, line2snoy, 80.0f, 30.0f)];
+    UILabel *snoLabel = [[UILabel alloc] initWithFrame:CGRectMake(line2snox, line2snoy, 100.0f, 30.0f)];
     snoLabel.text = @"Lock SNO:";
     [self.view addSubview:snoLabel];
 
-    float line2snoTFX = line2snox + 80;
+    float line2snoTFX = line2snox + 100;
     locksnoTF = [[UITextField alloc] initWithFrame:CGRectMake(line2snoTFX, line2snoy, 180, 30)];
     locksnoTF.placeholder = @"lock's SNO";
     [self addToolBar:locksnoTF];
@@ -140,11 +145,11 @@ UITextField *gatewayIDTF;
     //qrcode label
     float line2qrx = 20.0f;
     float line2qry = snoLabel.frame.origin.y + snoLabel.frame.size.height + 10;
-    UILabel *qrLabel = [[UILabel alloc] initWithFrame:CGRectMake(line2qrx, line2qry, 80.0f, 30.0f)];
+    UILabel *qrLabel = [[UILabel alloc] initWithFrame:CGRectMake(line2qrx, line2qry, 100.0f, 30.0f)];
     qrLabel.text = @"Gateway ID:";
     [self.view addSubview:qrLabel];
 
-    float line2qrTFX = line2qrx + 80;
+    float line2qrTFX = line2qrx + 100;
     gatewayIDTF = [[UITextField alloc] initWithFrame:CGRectMake(line2qrTFX, line2qry, 180, 30)];
     gatewayIDTF.placeholder = @"Gateway's ID";
     [self addToolBar:gatewayIDTF];
@@ -162,7 +167,7 @@ UITextField *gatewayIDTF;
     connMACBtn.backgroundColor = [UIColor lightGrayColor];
     connMACBtn.userInteractionEnabled = YES;
 
-    [connMACBtn addTarget:self action:@selector(connViaMacSno) forControlEvents:UIControlEventTouchUpInside];
+    [connMACBtn addTarget:self action:@selector(mqttSendData) forControlEvents:UIControlEventTouchUpInside];
 
     [self.view addSubview:connMACBtn];
     
@@ -174,39 +179,41 @@ UITextField *gatewayIDTF;
     myDelegate.resultTV = [[UITextView alloc] initWithFrame:CGRectMake(20, tvY, tvW, tvH)];
     [self.view addSubview: myDelegate.resultTV];
     
-    [self setTitleBar :@"BLe Lib"];
+    [self setTitleBar :@"MQTT Lib"];
     
     UIColor *ViewBackgroundColor = [UIColor colorWithRed:(236)/255.0 green:(238)/255.0 blue:(240)/255.0 alpha:1.0];
     self.view.backgroundColor = ViewBackgroundColor;
 }
 
-
--(void)connViaMacSno {
+//user login
+-(void) userLogin {
+    myDelegate.isMqttLoginOk = NO;
     [self hideKey];
-//    NSString *mac = macTF.text;
-//    NSString *sno   = snoTF.text;
-//    NSString *qrcode   = qrcode2TF.text;
-//
-//    mac = [mac stringByReplacingOccurrencesOfString:@":" withString:@""];
-//    BleLock *mylock = [[BleLock alloc] init];
-//    mylock.SNO = sno;
-//    mylock.lockmac = mac;
-//    mylock.qrCode = qrcode;
-////        mylock.SNO = @"d0e3c3";
-////        mylock.lockmac = @"FC510BC5DD51";
-////        mylock.qrCode = @"221234567890";
-//
-//    NSMutableArray *connectList = [[NSMutableArray alloc] init];
-//    [connectList addObject:mylock];
-//
-//    [[SinovoBle sharedBLE] connectLockViaMacSno :connectList];
+    NSString *account = accountTF.text;
+    NSString *pass   = passTF.text;
+    
+    if (![account isEqualToString:@""] && ![pass isEqualToString:@""]) {
+        [[httpCallback sharedHttpCallback] userLogin:account :pass];
+    }
 }
 
--(void) connViaQrc {
+//send data via mqtt ,  gateway must online
+-(void)mqttSendData {
     [self hideKey];
-//    NSString *qrcode = qrcodeTF.text;
-//    NSString *imei   = imeiTF.text;
-//    [[SinovoBle sharedBLE] connectLockViaQRCode :qrcode :imei];
+    NSString *mac       = lockmacTF.text;
+    NSString *sno       = locksnoTF.text;
+    NSString *gatewayid    = gatewayIDTF.text;
+    
+    mac = @"FC510BC5DD51";
+    sno = @"958d5c";
+    gatewayid = @"3C61052AD7FC";
+    
+    mac = [mac stringByReplacingOccurrencesOfString:@":" withString:@""];
+    
+    //check battery via mqtt
+    if (myDelegate.isMqttLoginOk) {
+        [[MqttInstance sharedMqtt] getLockInfo :gatewayid :mac :sno :2];
+    }
 }
 
 

@@ -14,3 +14,12 @@
     @import UIKit;
     @import Foundation;
 #endif
+
+//根据RGB值来定义颜色
+#define ZXColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+
+#define SkyBlueColor            ZXColor(19, 186, 241,1.0)
+#define lockGreen               ZXColor(54, 223, 157, 1.0)
+#define lockRed                 ZXColor(255, 103, 103, 1.0)
+#define lockYellow              ZXColor(247, 174, 22, 1.0)
+

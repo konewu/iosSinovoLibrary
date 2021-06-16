@@ -16,4 +16,7 @@
 @property (strong, nonatomic) UILabel      *mqttstatusLb;
 @property (strong, nonatomic) UITextView   *resultTV;
 
+@property (nonatomic,assign) BOOL isMqttLoginOk;  //mqtt init ok ?
+@property (nonatomic,assign) NSString *lockSno;
+
 @end

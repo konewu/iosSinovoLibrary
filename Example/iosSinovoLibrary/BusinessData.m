@@ -44,12 +44,10 @@ extern IOAppDelegate *myDelegate;
         if ([dict objectForKey:@"autoCreateUser"] ) {
             //等待绑定成功，写入数据库后，更新homeUI页面显示，再返回首页，并取消进度条
             
-            [[SinovoBle sharedBLE] getLockInfo:2];      //获取电量
-            [[SinovoBle sharedBLE] getLockInfo:3];      //获取锁的状态，是否已经解锁
-            [[SinovoBle sharedBLE] getLockInfo:4];      //获取硬件信息
-            [[SinovoBle sharedBLE] getLockInfo:7];      //获取自动锁门的时间
-            [[SinovoBle sharedBLE] getLockInfo:8];      //获取静音设置
-            [[SinovoBle sharedBLE] getLockInfo:10];     //获取超级用户权限
+            [[SinovoBle sharedBLE] getLockInfo:2 :myDelegate.lockSno];      //获取电量
+            [[SinovoBle sharedBLE] getLockInfo:3 :myDelegate.lockSno];      //获取锁的状态，是否已经解锁
+            [[SinovoBle sharedBLE] getLockInfo:4 :myDelegate.lockSno];      //获取硬件信息
+
         }
         return;
     }
@@ -125,7 +123,7 @@ extern IOAppDelegate *myDelegate;
 
 //锁 死锁结束
 - (void) finishFrozen {
-    [[SinovoBle sharedBLE] getLockInfo :2];
+    [[SinovoBle sharedBLE] getLockInfo :2 :myDelegate.lockSno];
 }
 
 - (void) errSnoToDO {

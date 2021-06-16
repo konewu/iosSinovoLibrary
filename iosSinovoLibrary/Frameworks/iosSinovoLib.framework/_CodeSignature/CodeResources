@@ -8,6 +8,10 @@
 		<data>
 		Sd8wgKxfjz7SCQLTBDkU4MEW8aY=
 		</data>
+		<key>Headers/BleData.h</key>
+		<data>
+		XXxJtd3hDvkKnc2B65JULOBv/FQ=
+		</data>
 		<key>Headers/BleLock.h</key>
 		<data>
 		DFUNMu5QO1Da0FuaS7Va2GO/kbo=
@@ -46,15 +50,15 @@
 		</data>
 		<key>Headers/MqttInstance.h</key>
 		<data>
-		EmHAtgyTczbfyf8OlnvruvhMCdk=
+		vaySyBIxKpr/eLGJO52xnqGV1HA=
 		</data>
 		<key>Headers/SinovoBle.h</key>
 		<data>
-		AOxyk2Fh63AA/gkWM9PUa9DM0YE=
+		F7LeVhahQEAtEHMtDl5zzoTsHj4=
 		</data>
 		<key>Headers/iosSinovoLib.h</key>
 		<data>
-		CjYY3NwGI7cPw5A0i0KQpgaQ2hA=
+		XpuhAEC5Ttp95SzWq/kktQYT7Zc=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -93,6 +97,17 @@
 			<key>hash2</key>
 			<data>
 			w3Lo5mBKS2+xJSUlih5h1npzCoTCaogRrjnP2mqxHMc=
+			</data>
+		</dict>
+		<key>Headers/BleData.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XXxJtd3hDvkKnc2B65JULOBv/FQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			zFrC61M7f6o2ZuTHh/iK0t2xXDoy8BwbluBb0hTyR5Q=
 			</data>
 		</dict>
 		<key>Headers/BleLock.h</key>
@@ -198,33 +213,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EmHAtgyTczbfyf8OlnvruvhMCdk=
+			vaySyBIxKpr/eLGJO52xnqGV1HA=
 			</data>
 			<key>hash2</key>
 			<data>
-			TaMyxfscvlUeOda5pKpgsVmjRW0ZdAxt0j+21McICrI=
+			DNceXoB2zip/rT36o0OOxNWp2Y9iS8Aums1gnUHupGA=
 			</data>
 		</dict>
 		<key>Headers/SinovoBle.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AOxyk2Fh63AA/gkWM9PUa9DM0YE=
+			F7LeVhahQEAtEHMtDl5zzoTsHj4=
 			</data>
 			<key>hash2</key>
 			<data>
-			eh1UsObCwH1HVb1elSgtF72/UwBvVzzG/BdlnuCGglg=
+			C7Vdf7LZvSWiWlE8xmmqJPu0PerSo/439nbFZXLsMQ8=
 			</data>
 		</dict>
 		<key>Headers/iosSinovoLib.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CjYY3NwGI7cPw5A0i0KQpgaQ2hA=
+			XpuhAEC5Ttp95SzWq/kktQYT7Zc=
 			</data>
 			<key>hash2</key>
 			<data>
-			s/Pw8Epai9EObrmNdujxeFN85fOS5F5HwfchJgoUjEo=
+			ndSehySCzoTnnWwLkNPC2vfWSAnPe3riSaVolx7JuMI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
