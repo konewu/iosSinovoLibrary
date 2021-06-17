@@ -1,16 +1,36 @@
 PODS:
-  - iosSinovoLibrary (0.1.0)
+  - IMSLog (1.0.8)
+  - iOSDFULibrary (4.10.3):
+    - ZIPFoundation (= 0.9.11)
+  - iosSinovoLibrary (0.3.0):
+    - iOSDFULibrary (~> 4.10.3)
+    - IotLinkKit (~> 1.2.1)
+  - IotLinkKit (1.2.2):
+    - IMSLog
+  - ZIPFoundation (0.9.11)
 
 DEPENDENCIES:
   - iosSinovoLibrary (from `../`)
+
+SPEC REPOS:
+  https://github.com/aliyun/aliyun-specs.git:
+    - IMSLog
+    - IotLinkKit
+  https://github.com/CocoaPods/Specs.git:
+    - iOSDFULibrary
+    - ZIPFoundation
 
 EXTERNAL SOURCES:
   iosSinovoLibrary:
     :path: "../"
 
 SPEC CHECKSUMS:
-  iosSinovoLibrary: 70e94a8e548819d341707dc98dd632708f3b9e1c
+  IMSLog: d17ae9fa27c5a31ef5a76ed4e233fd4c89404508
+  iOSDFULibrary: 7aade51a907d01ca9a87055003cd232b09efd78f
+  iosSinovoLibrary: 43023f549080670b53152cc397be24d613fb8957
+  IotLinkKit: 0ee37f86a8af9e0437e3037800fdd98d9100a9eb
+  ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
 
-PODFILE CHECKSUM: d9e11017507ad45b0bd5f8851b27b233bdb5d000
+PODFILE CHECKSUM: 58505b04488c117f1f5fb96ddbd9277b614d8c74
 
 COCOAPODS: 1.10.1

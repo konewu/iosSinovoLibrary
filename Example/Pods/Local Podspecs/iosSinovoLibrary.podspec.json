@@ -27,6 +27,9 @@
   "dependencies": {
     "IotLinkKit": [
       "~> 1.2.1"
+    ],
+    "iOSDFULibrary": [
+      "~> 4.10.3"
     ]
   },
   "static_framework": true

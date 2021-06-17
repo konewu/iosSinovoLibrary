@@ -40,6 +40,7 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'IotLinkKit', '~> 1.2.1'
+  s.dependency 'iOSDFULibrary', '~> 4.10.3'
   
   s.static_framework = true
 

@@ -266,6 +266,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				727A9D926A8232430B300DF0 /* [CP] Copy Pods Resources */,
+				22BE264DFDB3CFCCB316E5CE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,6 +357,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		22BE264DFDB3CFCCB316E5CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iosSinovoLibrary_Example/Pods-iosSinovoLibrary_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ZIPFoundation/ZIPFoundation.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSDFULibrary/iOSDFULibrary.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZIPFoundation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSDFULibrary.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iosSinovoLibrary_Example/Pods-iosSinovoLibrary_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6EA1E0F9C264B6230B9AE12C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

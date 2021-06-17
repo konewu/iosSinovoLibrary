@@ -91,8 +91,12 @@ BOOL mqttLostAfterLogin = NO;   //mqtt 注册成功之后的 连接丢失记录
 - (void)onMsgArrived:(nonnull NSString *)topic :(nonnull id)msg { 
     NSLog(@"Receive message from MQTT server topic：%@ data:%@", topic, msg);
     
-    NSString *result_old = myDelegate.resultTV.text;
-    myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\n Receive msg from mqtt: %@", result_old, msg];
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    dispatch_async(mainQueue, ^{
+        NSString *result_old = myDelegate.resultTV.text;
+        myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\n Receive msg from mqtt: %@", result_old, msg];
+    });
+    
 }
 
 //Publish message to MQTT server failed
@@ -116,8 +120,11 @@ BOOL mqttLostAfterLogin = NO;   //mqtt 注册成功之后的 连接丢失记录
 - (void)onSubcribeFailed {
 
     NSLog(@"subcribe topic failed");
-    NSString *result_old = myDelegate.resultTV.text;
-    myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\n Subcribe topic failed!", result_old];
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    dispatch_async(mainQueue, ^{
+        NSString *result_old = myDelegate.resultTV.text;
+        myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\n Subcribe topic failed!", result_old];
+    });
     
     //try to logout MQTT
     [[MqttInstance sharedMqtt] unSubscriptTopic];
@@ -136,10 +143,12 @@ BOOL mqttLostAfterLogin = NO;   //mqtt 注册成功之后的 连接丢失记录
     
     //do something
     myDelegate.isMqttLoginOk = YES;
-    NSString *result_old = myDelegate.resultTV.text;
-    myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\n Subcribe topic Success!", result_old];
     
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    dispatch_async(mainQueue, ^{
+        NSString *result_old = myDelegate.resultTV.text;
+        myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\n Subcribe topic Success!", result_old];
+    });
 }
-
 
 @end

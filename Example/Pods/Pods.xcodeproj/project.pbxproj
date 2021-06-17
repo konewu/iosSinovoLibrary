@@ -15,7 +15,6 @@
 			dependencies = (
 			);
 			name = IMSLog;
-			productName = IMSLog;
 		};
 		F4FBE466B0DF6B7512E21301739DB3A3 /* IotLinkKit */ = {
 			isa = PBXAggregateTarget;
@@ -23,113 +22,273 @@
 			buildPhases = (
 			);
 			dependencies = (
-				9C67C6531E8A23081DB32532C298CE2B /* PBXTargetDependency */,
+				8D1CFC9811A30D5BAE1277368DD66A54 /* PBXTargetDependency */,
 			);
 			name = IotLinkKit;
-			productName = IotLinkKit;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0D4799F02B5442962625C7FDA82BDF89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		146C91A6B6B52B6FA764CB7B0B2308FB /* Pods-iosSinovoLibrary_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C4EF5EADAEFE4EE9BC57E852C386CE9 /* Pods-iosSinovoLibrary_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2119FBB08073B01CCA9F0EFA37ABBCE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		3AEB5CAD643660F3F6AEBABD5A357268 /* Pods-iosSinovoLibrary_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DCAB8487A992832D0CD07B8546B9703 /* Pods-iosSinovoLibrary_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E0E85B59801DB93895E7C60800ACC70 /* iosSinovoLibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35CEA07846A02B052DF2590845112AA7 /* iosSinovoLibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8100E8EFE67307717CC4FDBCFCD52DFC /* Pods-iosSinovoLibrary_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A699B80EFBAD9317A7297561744E53A8 /* Pods-iosSinovoLibrary_Example-dummy.m */; };
-		EFC2AD9C2F2941B1F5EA1CADA67DB1E6 /* Pods-iosSinovoLibrary_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D167E9C74414B0A79CF8200F96D05A /* Pods-iosSinovoLibrary_Tests-dummy.m */; };
-		F12C95A35C06D92D43AAD8C3337121E5 /* iosSinovoLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 572CEE9EB5AD8223A2302F837FB6CE73 /* iosSinovoLibrary-dummy.m */; };
-		F7D41B604FB4898F8C2D0C602F00ACFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		057997576317412A9639BB18930928B2 /* DFUControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F078E41DED97A7718BBAB6AE97AE9B /* DFUControlPoint.swift */; };
+		0808AD4BBF47A04DBA254FD581AF875A /* crc32.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE686CEAA2020BC9268B45F4585D38DF /* crc32.swift */; };
+		093BF537E5867D5CF044B9EA4E9EA3B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D901AA780D482D47459D2C3828C658 /* Foundation.framework */; };
+		146C91A6B6B52B6FA764CB7B0B2308FB /* Pods-iosSinovoLibrary_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4B86F4E92D0CE3BAA47DD3861C31B43 /* Pods-iosSinovoLibrary_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19EEB53F90ECDD62253773F12C6D1295 /* DFUStreamZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3708C58019C56CE9DB3E61A5AD89E84 /* DFUStreamZip.swift */; };
+		1AAB1C022012C931474B2F7186975AAA /* Pods-iosSinovoLibrary_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F92C973BA7FE16F0C17EAEF8BCADCE67 /* Pods-iosSinovoLibrary_Example-dummy.m */; };
+		1F058FFCF08BFE94037D72A2454F64EC /* LegacyDFUExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4F193662B4CDD7AD3D6D1206E36795 /* LegacyDFUExecutor.swift */; };
+		1F6E1AD5E8315253C08FCE5F9534D1A3 /* DFUUuidHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E04FB720DF905F603BFD416A997503 /* DFUUuidHelper.swift */; };
+		20F09120CE1795D101835B66CCB4CC90 /* IntelHex2BinConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60554C6AC8F0A01886532F413D110AAC /* IntelHex2BinConverter.swift */; };
+		2440C4BFAB8248A47623A5655EF24062 /* SecureDFUService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB1B5980B9E4007DC97F9B596CFC2B2 /* SecureDFUService.swift */; };
+		27E097A183A627AE5688F3514B1F0F51 /* DFUServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7A231639F2EBA4EA4D9CBDC2D48F6C /* DFUServiceDelegate.swift */; };
+		29C3F6DD9EBC08826D35C0C5CEFC10DD /* LegacyDFUPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23BC635529BB878F091C120AB55EC95 /* LegacyDFUPeripheralDelegate.swift */; };
+		2B50C7517C6A61133DBBE7A95C47141F /* LoggerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC2F395CD1546AB063D0840239AFD8F /* LoggerDelegate.swift */; };
+		2BD26C7CE8E43EA2EA79EE8620E43C0D /* ZipArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9F0DE0C7777D5738EFD05C832CE644 /* ZipArchive.swift */; };
+		2BD499F8479192CB441244141481F332 /* iOSDFULibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F6860A8ECF5066C59427A0B76291D5 /* iOSDFULibrary-dummy.m */; };
+		3FC2FDE66E511D6953F5A9E897C6E40B /* LegacyDFUPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BAF657DDD93218882257E66E663FD3 /* LegacyDFUPeripheral.swift */; };
+		42D5E28A25C364DCD9E9AB675CFF4B97 /* DFUPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B49E5D85CBAF0C91E763D836E72AC1C /* DFUPacket.swift */; };
+		43ED220E4D8670A3B6C8848AE33E07A9 /* iosSinovoLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 572CEE9EB5AD8223A2302F837FB6CE73 /* iosSinovoLibrary-dummy.m */; };
+		49BAF27F73C47ED99C84005A746E5AC2 /* DFUController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970D093823AC494D458AB4060D546CE /* DFUController.swift */; };
+		4C36F14F66923A51B41B60FB6BBE3E28 /* SoftdeviceBootloaderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD39AD7116D13000B15DD0A267E34E /* SoftdeviceBootloaderInfo.swift */; };
+		50B861C3555739A225AED58DC86CE83A /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACB827D79A4558F979CA1F5CDBD95B4 /* ZIPFoundation.framework */; };
+		5E805067273188C25D4BDD1516EB18A4 /* Manifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0714045D6AF10ECBCE8EEDF2BE2F5AD4 /* Manifest.swift */; };
+		5FF25715015089968487C66729C4FAE2 /* DFUStarterPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1467EAC925F5BC0903C109F87E8C4 /* DFUStarterPeripheral.swift */; };
+		632A8A37ED9BE935A3A3E9F8525ECE28 /* DFUPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C3B6F1D2B5BBEC49DC0E0C6CC3182 /* DFUPeripheral.swift */; };
+		69809DB5E45F0FDCE1E7830CC3AEE715 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 432F03B7E5DB7BD3E93D0FA63C4EEF0B /* ReplaceMe.m */; };
+		6BEBC001E591B356A22F75A48FB0019E /* DFUServiceInitiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C2C74910DAAC247C091CEE9276F69E /* DFUServiceInitiator.swift */; };
+		6C8D39701CF54B3DE288D92616BF871C /* Pods-iosSinovoLibrary_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F47CFFD13134F1EA3C603DD2C73A806 /* Pods-iosSinovoLibrary_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D5EB5FCED6621F96DB2301CA65655F5 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B265CAD1797FAD652CD391F9E9BA912D /* Entry.swift */; };
+		75BD3167722E2BF167AC2F44A947D727 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D901AA780D482D47459D2C3828C658 /* Foundation.framework */; };
+		75C54C98E53CE6160583F54F44B79F1E /* ZIPFoundation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 93D73C74626310430F38332618E79AEC /* ZIPFoundation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79F231007AC7A6733C4B80B4B9418500 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D901AA780D482D47459D2C3828C658 /* Foundation.framework */; };
+		7C5D2E7EBA98F1E8B703B6430AFF0C41 /* ButtonlessDFU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC7361731B001272D863838A3D69D5 /* ButtonlessDFU.swift */; };
+		8A887C2BD7FC11DA7D791E06997E25A6 /* DFUServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FAFD9A6771BFFC10DEECA7F01939A3 /* DFUServiceController.swift */; };
+		8FB2A0272EE03C90F84353273D292F95 /* DFUService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63733E38585A054B18318779E26838E /* DFUService.swift */; };
+		90C942082F4DA6B2D0E1A846F4681983 /* DFUExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1CEA580C02EA2ABA803B3D6303FC8D /* DFUExecutor.swift */; };
+		91F5304FA925006BCF82D2EA3036774E /* LoggerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B3D99089F361A2C0E2A949A995B2E2 /* LoggerHelper.swift */; };
+		9B5C1DABE5F6F0E74D42583094051923 /* SecureDFUPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728C554115417EA53509AB2EC72DAD9A /* SecureDFUPeripheral.swift */; };
+		9C038B950F6B3C07FE9F439508357B5E /* ManifestFirmwareInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE64352AA9DFA17B01047EF39E2EF4A /* ManifestFirmwareInfo.swift */; };
+		9C63F965F87B7BFCABFBFB69A3E4F6F7 /* DFUStreamHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E114ED7B7949090FF7E5C5FE747C7F /* DFUStreamHex.swift */; };
+		A2C69CCB8F1E7AF0D5D1919252355559 /* LegacyDFUServiceInitiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F126B67F4D96319D4E68E089FCB3BE /* LegacyDFUServiceInitiator.swift */; };
+		A38407D94AB472D98E97A4954E5C8558 /* SecureDFUPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2580AD53BAA31ECD6CB9328D790280 /* SecureDFUPacket.swift */; };
+		A94D81B3E4AEEABDF74E1C8777FD449F /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304DD4D1EA8C560CB0CEDA295D7963E8 /* Archive.swift */; };
+		B1AA31DC785AB38BF23F9C7512B00DBD /* SecureDFUServiceInitiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9DBB6CAED2FCE08CEF1EB8C253F5E0 /* SecureDFUServiceInitiator.swift */; };
+		B49C4A24ECDADD5E992EC563A5CBD29B /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1993BB1A9F356AFFC996FCC7730031 /* Data+Compression.swift */; };
+		B4EF8F949CDAB22EE5A214D28CFBF57A /* DFUStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76843A71D7F571F542BC81E8668BFD /* DFUStream.swift */; };
+		B55714AC3C7166C56F3C9ACA63BD58C0 /* SecureDFUControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9125FB7428926DEC1E443275263611C5 /* SecureDFUControlPoint.swift */; };
+		BAEDD649B5205B9DF811276BF542B108 /* DFUVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D624591D7839E7CA8630F3A80FDB5F /* DFUVersion.swift */; };
+		C05876E1A230253564A273EE417A5949 /* Archive+Writing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0617CF9F2C75EA14F3C48BF6EF45E7B3 /* Archive+Writing.swift */; };
+		C3F2C0D0DA9E592F9DDB02CCE8E82404 /* DFUCharacteristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F8F502587A8526B08F23A149997765 /* DFUCharacteristic.swift */; };
+		C71DDE4CE526BBF6D6F70AEB700BA989 /* Archive+Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F36AF0B0B4ED7D6CA8C3B40CC52C028 /* Archive+Reading.swift */; };
+		C789A19CB5E81BE5E984A7DC173132BD /* iOSDFULibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B04BBE96D23FE5F280BC4EC9CCDB6A6 /* iOSDFULibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9EA9ABF4D1361C2861449DD331B63F7 /* iosSinovoLibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35CEA07846A02B052DF2590845112AA7 /* iosSinovoLibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC0E39690CAC6E6B56B1EE100F6C57AD /* DFUFirmware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990B4B516C19FBC8799FEAD970E1EB1D /* DFUFirmware.swift */; };
+		CE7E6C32FF8524F96F7DA383FB04DF5C /* SecureDFUPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC5459FE6D3AB96606E45EB191D574 /* SecureDFUPeripheralDelegate.swift */; };
+		D11E92E26D8FEE17FA7652BCF05641E7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451CE3969E3E098E0EACE7494418C5F9 /* Data.swift */; };
+		D23A4E52DA9CBD8F42E60A982431C23B /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD20B095DE9C13A552E08293842E7CC6 /* Double.swift */; };
+		D81D99A1BC5943D4D14B3354B07ABF16 /* Data+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2287BD78AF2A0E72E4EC1DB38E89E5FA /* Data+Serialization.swift */; };
+		D9C613356C5D83213B8AEC9B7EA33E10 /* DFUPeripheralSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4FFDD5F92A0D256D5BB32BC507EA9E /* DFUPeripheralSelector.swift */; };
+		DD98CFC4BA7ECBC4A307831716A1A9A8 /* Archive+MemoryFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C419772634A399612A6C17056D724F /* Archive+MemoryFile.swift */; };
+		E08BDB0B608E8C40DDA7F849D3C1476D /* DFUServiceSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48CBF686D19A97CCC0A5FAA8F85C727 /* DFUServiceSelector.swift */; };
+		E1BA225C938414E160961C29ABE32EAE /* DFUStreamBin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21814261C3721B88631E5D7E1729110 /* DFUStreamBin.swift */; };
+		E4C7ACB744B2F7E2D84143ABB617CBC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D901AA780D482D47459D2C3828C658 /* Foundation.framework */; };
+		E5857E16426319AE0B61118AFADE06E1 /* DFUPeripheralSelectorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC468AAC27DBD1E873834C11F4F4906C /* DFUPeripheralSelectorDelegate.swift */; };
+		E7D5C9B7E1174F58E0BA90A3AD6C189E /* SecureDFUExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088EF27354F64110FE6773C6B0486B92 /* SecureDFUExecutor.swift */; };
+		ECF9D1E2F2750D71A1CE526153131786 /* DFUPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B320A20E7FC09E7593BC0C84F70BC453 /* DFUPeripheralDelegate.swift */; };
+		ED14BB5948998D551A7CD4FE7E0B403A /* FileManager+ZIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FCE9160537870F63C15BE9C028038F /* FileManager+ZIP.swift */; };
+		EFC2AD9C2F2941B1F5EA1CADA67DB1E6 /* Pods-iosSinovoLibrary_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5EEF5878B78D5EB94CA9B9FD2D060E /* Pods-iosSinovoLibrary_Tests-dummy.m */; };
+		F4659CFC67B7A3D2C4D830FAC3263271 /* LegacyDFUService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EBB6B1165C29DE36A86F2ACBD32A43 /* LegacyDFUService.swift */; };
+		F7D41B604FB4898F8C2D0C602F00ACFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D901AA780D482D47459D2C3828C658 /* Foundation.framework */; };
+		F8ADB4B0CF3BD2A5A82023D169C7C4E7 /* ZIPFoundation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BB13EFC7589A4C3852AB465E22B1F5 /* ZIPFoundation-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1BD2C19F663823A2F635806770ADC154 /* PBXContainerItemProxy */ = {
+		23E02F62D4B382324F99DF268F8442FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A4836E8A2CE21326895499C8A731D078;
-			remoteInfo = iosSinovoLibrary;
+			remoteGlobalIDString = AA15C8469D67684160CC2A7098EB841C;
+			remoteInfo = ZIPFoundation;
 		};
-		270D201ACB8810A6ED203E2148736DAF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F4FBE466B0DF6B7512E21301739DB3A3;
-			remoteInfo = IotLinkKit;
-		};
-		3A7CE5F79D068D246F3FC51282695FEC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A2A523E6D90FF53AA039C147829BDA15;
-			remoteInfo = IMSLog;
-		};
-		6AD1063DF356F78D12760A0D9C873F40 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F4FBE466B0DF6B7512E21301739DB3A3;
-			remoteInfo = IotLinkKit;
-		};
-		716152AD300350157EB25A0E52562C2D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A2A523E6D90FF53AA039C147829BDA15;
-			remoteInfo = IMSLog;
-		};
-		FD6235DC33E26F252268CB58D1DEAE64 /* PBXContainerItemProxy */ = {
+		458EF5337A383860C5013B320FE5AD4A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0D5EB99D1BBCB85D00FA28289177C538;
 			remoteInfo = "Pods-iosSinovoLibrary_Example";
 		};
+		533B3D7544AF8A765F2FEF68CF1A08C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2A523E6D90FF53AA039C147829BDA15;
+			remoteInfo = IMSLog;
+		};
+		70FD549226C46D9C35A3CFA1ACB1D68E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA15C8469D67684160CC2A7098EB841C;
+			remoteInfo = ZIPFoundation;
+		};
+		7A516B386BA7ACCABBD1C1662CB93B9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4FBE466B0DF6B7512E21301739DB3A3;
+			remoteInfo = IotLinkKit;
+		};
+		903356ACBA2A80C5563E8D0DDB0EC29D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4FBE466B0DF6B7512E21301739DB3A3;
+			remoteInfo = IotLinkKit;
+		};
+		9C0894B5D1F6A45188D2DE99BE57C65F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2A523E6D90FF53AA039C147829BDA15;
+			remoteInfo = IMSLog;
+		};
+		E81C2D0D9F9555144D8CE3A53D56FB47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9506C7FCDAE6E6967A99655F452EEE93;
+			remoteInfo = iOSDFULibrary;
+		};
+		E960D29CE8BA945FCFFAFC58BB849C43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9506C7FCDAE6E6967A99655F452EEE93;
+			remoteInfo = iOSDFULibrary;
+		};
+		F4F9819109142D4A2BEFEB34879E7248 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4836E8A2CE21326895499C8A731D078;
+			remoteInfo = iosSinovoLibrary;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		024E1DB072AF2C305F6F8605AA6A996B /* Pods-iosSinovoLibrary_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iosSinovoLibrary_Example-Info.plist"; sourceTree = "<group>"; };
-		06EC7F031A35D9E1054C51584E221B6D /* Pods_iosSinovoLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosSinovoLibrary_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E1D5521D25A131E22B0ED12AE1AFA94 /* Pods-iosSinovoLibrary_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iosSinovoLibrary_Example-resources.sh"; sourceTree = "<group>"; };
-		0E75AC9208EDBA0A395C606AA943693E /* IMSLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IMSLog.framework; path = IMSLog/IMSLog.framework; sourceTree = "<group>"; };
-		2DCAB8487A992832D0CD07B8546B9703 /* Pods-iosSinovoLibrary_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iosSinovoLibrary_Example-umbrella.h"; sourceTree = "<group>"; };
-		3007F6AE5FDABA21AFAAC1EE54FCE3CD /* Pods-iosSinovoLibrary_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iosSinovoLibrary_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		30D167E9C74414B0A79CF8200F96D05A /* Pods-iosSinovoLibrary_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iosSinovoLibrary_Tests-dummy.m"; sourceTree = "<group>"; };
+		0177AE6C94E1CB5AD72E87549EF17A8C /* Pods-iosSinovoLibrary_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iosSinovoLibrary_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0617CF9F2C75EA14F3C48BF6EF45E7B3 /* Archive+Writing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Archive+Writing.swift"; path = "Sources/ZIPFoundation/Archive+Writing.swift"; sourceTree = "<group>"; };
+		06EC7F031A35D9E1054C51584E221B6D /* Pods_iosSinovoLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iosSinovoLibrary_Example.framework; path = "Pods-iosSinovoLibrary_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0714045D6AF10ECBCE8EEDF2BE2F5AD4 /* Manifest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manifest.swift; path = iOSDFULibrary/Classes/Utilities/DFUPackage/Manifest/Manifest.swift; sourceTree = "<group>"; };
+		079FFC626FFF87FB45622F5683F5549D /* Pods-iosSinovoLibrary_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iosSinovoLibrary_Tests.modulemap"; sourceTree = "<group>"; };
+		088EF27354F64110FE6773C6B0486B92 /* SecureDFUExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUExecutor.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/DFU/SecureDFUExecutor.swift; sourceTree = "<group>"; };
+		0970D093823AC494D458AB4060D546CE /* DFUController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUController.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUController.swift; sourceTree = "<group>"; };
+		0AF177CA6036295E0E713ED840E9CA48 /* Pods-iosSinovoLibrary_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iosSinovoLibrary_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		0B4F193662B4CDD7AD3D6D1206E36795 /* LegacyDFUExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUExecutor.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/DFU/LegacyDFUExecutor.swift; sourceTree = "<group>"; };
+		0B9F0DE0C7777D5738EFD05C832CE644 /* ZipArchive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZipArchive.swift; path = iOSDFULibrary/Classes/Utilities/ZipArchive.swift; sourceTree = "<group>"; };
+		14F6860A8ECF5066C59427A0B76291D5 /* iOSDFULibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOSDFULibrary-dummy.m"; sourceTree = "<group>"; };
+		178B070220F31F7FC67EC931205D5621 /* AlinkIoTExpress.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlinkIoTExpress.framework; path = "iot-linkkit/AlinkIoTExpress.framework"; sourceTree = "<group>"; };
+		21B1375088A0310C7AE2BE4C8188D12F /* iOSDFULibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iOSDFULibrary.framework; path = iOSDFULibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2287BD78AF2A0E72E4EC1DB38E89E5FA /* Data+Serialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Serialization.swift"; path = "Sources/ZIPFoundation/Data+Serialization.swift"; sourceTree = "<group>"; };
+		2B4FFDD5F92A0D256D5BB32BC507EA9E /* DFUPeripheralSelector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPeripheralSelector.swift; path = iOSDFULibrary/Classes/Implementation/DFUPeripheralSelector.swift; sourceTree = "<group>"; };
+		2EBBE89DE8CB2FF18BCD13CA3F8D42AD /* ZIPFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZIPFoundation.debug.xcconfig; sourceTree = "<group>"; };
+		2F36AF0B0B4ED7D6CA8C3B40CC52C028 /* Archive+Reading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Archive+Reading.swift"; path = "Sources/ZIPFoundation/Archive+Reading.swift"; sourceTree = "<group>"; };
+		304DD4D1EA8C560CB0CEDA295D7963E8 /* Archive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Archive.swift; path = Sources/ZIPFoundation/Archive.swift; sourceTree = "<group>"; };
+		33CF47C96127F8813D07E514FA4D636F /* Pods-iosSinovoLibrary_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iosSinovoLibrary_Example-resources.sh"; sourceTree = "<group>"; };
+		34D43293BB7DC3F2F22ECED07C91DAF0 /* Pods-iosSinovoLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iosSinovoLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
 		35CEA07846A02B052DF2590845112AA7 /* iosSinovoLibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iosSinovoLibrary-umbrella.h"; sourceTree = "<group>"; };
 		362D823606EE3B360EE1AF19A0698A80 /* iosSinovoLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iosSinovoLibrary.release.xcconfig; sourceTree = "<group>"; };
-		37DC0A7358F57B658BBA43980E52EEC7 /* AlinkMobileGateway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlinkMobileGateway.framework; path = "iot-linkkit/AlinkMobileGateway.framework"; sourceTree = "<group>"; };
-		386528DC7CE74E20A35714E723DA8B18 /* AlinkIoTExpress.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlinkIoTExpress.framework; path = "iot-linkkit/AlinkIoTExpress.framework"; sourceTree = "<group>"; };
-		41DFFFA350014B4F03EEB48E52C16251 /* Pods-iosSinovoLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iosSinovoLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		4BB4078B6E6295B30731C14265DA6F01 /* Pods-iosSinovoLibrary_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iosSinovoLibrary_Tests.modulemap"; sourceTree = "<group>"; };
+		3A5104C5652D584087FD6E06392BBC38 /* Pods-iosSinovoLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iosSinovoLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		3B5EEF5878B78D5EB94CA9B9FD2D060E /* Pods-iosSinovoLibrary_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iosSinovoLibrary_Tests-dummy.m"; sourceTree = "<group>"; };
+		3EB060D02AD7B95808C2FD48DB92121D /* iOSDFULibrary-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iOSDFULibrary-Info.plist"; sourceTree = "<group>"; };
+		432F03B7E5DB7BD3E93D0FA63C4EEF0B /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = iosSinovoLibrary/Classes/ReplaceMe.m; sourceTree = "<group>"; };
+		43F126B67F4D96319D4E68E089FCB3BE /* LegacyDFUServiceInitiator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUServiceInitiator.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/DFU/LegacyDFUServiceInitiator.swift; sourceTree = "<group>"; };
+		451CE3969E3E098E0EACE7494418C5F9 /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = iOSDFULibrary/Classes/Utilities/Data.swift; sourceTree = "<group>"; };
+		46B3D99089F361A2C0E2A949A995B2E2 /* LoggerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoggerHelper.swift; path = iOSDFULibrary/Classes/Utilities/Logging/LoggerHelper.swift; sourceTree = "<group>"; };
+		46E04FB720DF905F603BFD416A997503 /* DFUUuidHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUUuidHelper.swift; path = iOSDFULibrary/Classes/Implementation/DFUUuidHelper.swift; sourceTree = "<group>"; };
+		47CC7EAD6C09744C00803E800387D184 /* iOSDFULibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iOSDFULibrary.modulemap; sourceTree = "<group>"; };
+		48A4A6EDC08C8AC933D0DCD507E9D173 /* ZIPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZIPFoundation.framework; path = ZIPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BCC482DE3780CC2B22136BAEB065F66 /* iosSinovoLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iosSinovoLibrary.debug.xcconfig; sourceTree = "<group>"; };
 		4CB540CAB60A4C93DF8DE2DBABC989AF /* iosSinovoLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iosSinovoLibrary.modulemap; sourceTree = "<group>"; };
-		5447771DA2DBA28A080FFCD733825C93 /* Pods-iosSinovoLibrary_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iosSinovoLibrary_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		4EABFE8870FCB5EE6AF078CE40BBE2BA /* IotLinkKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IotLinkKit.release.xcconfig; sourceTree = "<group>"; };
+		54205983F2312F01999B255B06B52382 /* IotLinkKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IotLinkKit.debug.xcconfig; sourceTree = "<group>"; };
 		572CEE9EB5AD8223A2302F837FB6CE73 /* iosSinovoLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iosSinovoLibrary-dummy.m"; sourceTree = "<group>"; };
-		5799B73F855C40EBE1A17FCB7545E501 /* iosSinovoLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = iosSinovoLibrary.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		5C4EF5EADAEFE4EE9BC57E852C386CE9 /* Pods-iosSinovoLibrary_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iosSinovoLibrary_Tests-umbrella.h"; sourceTree = "<group>"; };
+		5799B73F855C40EBE1A17FCB7545E501 /* iosSinovoLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = iosSinovoLibrary.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5ACB827D79A4558F979CA1F5CDBD95B4 /* ZIPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZIPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F47CFFD13134F1EA3C603DD2C73A806 /* Pods-iosSinovoLibrary_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iosSinovoLibrary_Example-umbrella.h"; sourceTree = "<group>"; };
+		60554C6AC8F0A01886532F413D110AAC /* IntelHex2BinConverter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntelHex2BinConverter.swift; path = iOSDFULibrary/Classes/Utilities/HexToBinConverter/IntelHex2BinConverter.swift; sourceTree = "<group>"; };
 		611C940141C4F475F9B8D2599CCFE8FA /* iosSinovoLibrary-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iosSinovoLibrary-Info.plist"; sourceTree = "<group>"; };
-		61E49AFFBB95C93BB6D8F3E15212993C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		6C25B18EF4ED13C45A2A2093F6B49483 /* IMSLog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IMSLog.release.xcconfig; sourceTree = "<group>"; };
-		702D1DC96D1C5361E16DC570E143A9BC /* IotLinkKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IotLinkKit.release.xcconfig; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		61E49AFFBB95C93BB6D8F3E15212993C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		65E114ED7B7949090FF7E5C5FE747C7F /* DFUStreamHex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStreamHex.swift; path = iOSDFULibrary/Classes/Utilities/Streams/DFUStreamHex.swift; sourceTree = "<group>"; };
+		6855F92596031F04F2583610DBE90747 /* Pods-iosSinovoLibrary_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iosSinovoLibrary_Tests-Info.plist"; sourceTree = "<group>"; };
+		6B04BBE96D23FE5F280BC4EC9CCDB6A6 /* iOSDFULibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDFULibrary-umbrella.h"; sourceTree = "<group>"; };
+		6B49E5D85CBAF0C91E763D836E72AC1C /* DFUPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPacket.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Characteristics/DFUPacket.swift; sourceTree = "<group>"; };
+		6BD43907BE56EE90BCAB0D69BD437F64 /* ZIPFoundation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZIPFoundation.modulemap; sourceTree = "<group>"; };
+		6D1CE82C6854BA975D5A56FF9C119B7C /* Pods-iosSinovoLibrary_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iosSinovoLibrary_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		728C554115417EA53509AB2EC72DAD9A /* SecureDFUPeripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUPeripheral.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Peripheral/SecureDFUPeripheral.swift; sourceTree = "<group>"; };
 		756B71B5FC6423D14449010ACEA198B7 /* iosSinovoLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iosSinovoLib.framework; path = iosSinovoLibrary/Frameworks/iosSinovoLib.framework; sourceTree = "<group>"; };
+		7665993BF8D21C08DFA39B95220FCCBC /* iOSDFULibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDFULibrary.debug.xcconfig; sourceTree = "<group>"; };
+		7C7A231639F2EBA4EA4D9CBDC2D48F6C /* DFUServiceDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUServiceDelegate.swift; path = iOSDFULibrary/Classes/Implementation/DFUServiceDelegate.swift; sourceTree = "<group>"; };
+		80D3B3A7D5C23658F064D59548717656 /* cafile.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = cafile.bundle; path = "iot-linkkit/AlinkIoTExpress.framework/cafile.bundle"; sourceTree = "<group>"; };
+		85EC7361731B001272D863838A3D69D5 /* ButtonlessDFU.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonlessDFU.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Characteristics/ButtonlessDFU.swift; sourceTree = "<group>"; };
+		87BB13EFC7589A4C3852AB465E22B1F5 /* ZIPFoundation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZIPFoundation-dummy.m"; sourceTree = "<group>"; };
+		8973FD028409C25DA25385EDF0F327AD /* Pods-iosSinovoLibrary_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iosSinovoLibrary_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8C750AB7744CC82A24949909A262EFCB /* iosSinovoLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iosSinovoLibrary-prefix.pch"; sourceTree = "<group>"; };
-		9A28143E046A2CD88B3D920FEBEA4CE4 /* Pods-iosSinovoLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iosSinovoLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		9AEF76A8639E2AED5DE9FBFA7FE4EFC6 /* Pods-iosSinovoLibrary_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iosSinovoLibrary_Example.modulemap"; sourceTree = "<group>"; };
-		9C1F50286BFC378670E48B714FFA40E9 /* IMSLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IMSLog.debug.xcconfig; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A022E5CE62068811F546DDC00AF72D13 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A5D14B36FE6D12674E23617FE0EB9AA4 /* Pods-iosSinovoLibrary_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iosSinovoLibrary_Tests-Info.plist"; sourceTree = "<group>"; };
-		A699B80EFBAD9317A7297561744E53A8 /* Pods-iosSinovoLibrary_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iosSinovoLibrary_Example-dummy.m"; sourceTree = "<group>"; };
-		AABA7C59045789FCB4EFFB0706760A9F /* Pods-iosSinovoLibrary_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iosSinovoLibrary_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BE801B6D10154C5D7FE37CFC636BC1FC /* iosSinovoLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iosSinovoLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D18D4ADF7FEED0F59EBFBCE37E7F120B /* Pods-iosSinovoLibrary_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iosSinovoLibrary_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D9B94DCADDD175C276AEC8AC7E906FE3 /* Pods-iosSinovoLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iosSinovoLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
-		DED53557ACED65B9A610DD77D9882F6C /* IotLinkKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IotLinkKit.debug.xcconfig; sourceTree = "<group>"; };
-		DF6F9C7F94BC90067DC6EA11F2523B26 /* Pods-iosSinovoLibrary_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iosSinovoLibrary_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E5F385CF3FE177F3B55028AE7CF813E6 /* IotLinkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IotLinkKit.framework; path = "iot-linkkit/IotLinkKit.framework"; sourceTree = "<group>"; };
-		EBA74DA2B26A0DA86948BF039B00A5C1 /* Pods_iosSinovoLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosSinovoLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC30AE1CBA6108494AF98CAFA7EC727C /* cafile.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = cafile.bundle; path = "iot-linkkit/AlinkIoTExpress.framework/cafile.bundle"; sourceTree = "<group>"; };
+		8E9DBB6CAED2FCE08CEF1EB8C253F5E0 /* SecureDFUServiceInitiator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUServiceInitiator.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/DFU/SecureDFUServiceInitiator.swift; sourceTree = "<group>"; };
+		9125FB7428926DEC1E443275263611C5 /* SecureDFUControlPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUControlPoint.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Characteristics/SecureDFUControlPoint.swift; sourceTree = "<group>"; };
+		927D1572431243D9712C35E0BDC13547 /* ZIPFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZIPFoundation.release.xcconfig; sourceTree = "<group>"; };
+		93D73C74626310430F38332618E79AEC /* ZIPFoundation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZIPFoundation-umbrella.h"; sourceTree = "<group>"; };
+		94BAF657DDD93218882257E66E663FD3 /* LegacyDFUPeripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUPeripheral.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Peripherals/LegacyDFUPeripheral.swift; sourceTree = "<group>"; };
+		96844129C63A52BCD07449A2F87F7A82 /* Pods-iosSinovoLibrary_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iosSinovoLibrary_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		990B4B516C19FBC8799FEAD970E1EB1D /* DFUFirmware.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUFirmware.swift; path = iOSDFULibrary/Classes/Implementation/Firmware/DFUFirmware.swift; sourceTree = "<group>"; };
+		9B001020CB45FF82328464F0BDF39C0D /* Pods-iosSinovoLibrary_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iosSinovoLibrary_Example-Info.plist"; sourceTree = "<group>"; };
+		9C76843A71D7F571F542BC81E8668BFD /* DFUStream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStream.swift; path = iOSDFULibrary/Classes/Utilities/Streams/DFUStream.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DBD39AD7116D13000B15DD0A267E34E /* SoftdeviceBootloaderInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoftdeviceBootloaderInfo.swift; path = iOSDFULibrary/Classes/Utilities/DFUPackage/Manifest/SoftdeviceBootloaderInfo.swift; sourceTree = "<group>"; };
+		9EB1B5980B9E4007DC97F9B596CFC2B2 /* SecureDFUService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUService.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Services/SecureDFUService.swift; sourceTree = "<group>"; };
+		A022E5CE62068811F546DDC00AF72D13 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		A0AD8526C6ADD4CB0934EE472345945E /* IMSLog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IMSLog.release.xcconfig; sourceTree = "<group>"; };
+		A23BC635529BB878F091C120AB55EC95 /* LegacyDFUPeripheralDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUPeripheralDelegate.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Peripherals/LegacyDFUPeripheralDelegate.swift; sourceTree = "<group>"; };
+		A3708C58019C56CE9DB3E61A5AD89E84 /* DFUStreamZip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStreamZip.swift; path = iOSDFULibrary/Classes/Utilities/Streams/DFUStreamZip.swift; sourceTree = "<group>"; };
+		A48CBF686D19A97CCC0A5FAA8F85C727 /* DFUServiceSelector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUServiceSelector.swift; path = iOSDFULibrary/Classes/Implementation/DFUSelector/DFUServiceSelector.swift; sourceTree = "<group>"; };
+		A5E943BBEFF87548AA5D5A548AAFB90B /* ZIPFoundation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ZIPFoundation-Info.plist"; sourceTree = "<group>"; };
+		A63733E38585A054B18318779E26838E /* DFUService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUService.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUService.swift; sourceTree = "<group>"; };
+		A6FCE9160537870F63C15BE9C028038F /* FileManager+ZIP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FileManager+ZIP.swift"; path = "Sources/ZIPFoundation/FileManager+ZIP.swift"; sourceTree = "<group>"; };
+		AB5EFD332BCD89030D00C767C22CB3B5 /* AlinkMobileGateway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlinkMobileGateway.framework; path = "iot-linkkit/AlinkMobileGateway.framework"; sourceTree = "<group>"; };
+		B265CAD1797FAD652CD391F9E9BA912D /* Entry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Entry.swift; path = Sources/ZIPFoundation/Entry.swift; sourceTree = "<group>"; };
+		B320A20E7FC09E7593BC0C84F70BC453 /* DFUPeripheralDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPeripheralDelegate.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUPeripheralDelegate.swift; sourceTree = "<group>"; };
+		B3FC5459FE6D3AB96606E45EB191D574 /* SecureDFUPeripheralDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUPeripheralDelegate.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Peripheral/SecureDFUPeripheralDelegate.swift; sourceTree = "<group>"; };
+		B4C2C74910DAAC247C091CEE9276F69E /* DFUServiceInitiator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUServiceInitiator.swift; path = iOSDFULibrary/Classes/Implementation/DFUServiceInitiator.swift; sourceTree = "<group>"; };
+		B7FEB0758161F4BC60B93FD4EB419AE6 /* Pods-iosSinovoLibrary_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iosSinovoLibrary_Example-frameworks.sh"; sourceTree = "<group>"; };
+		BAE64352AA9DFA17B01047EF39E2EF4A /* ManifestFirmwareInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ManifestFirmwareInfo.swift; path = iOSDFULibrary/Classes/Utilities/DFUPackage/Manifest/ManifestFirmwareInfo.swift; sourceTree = "<group>"; };
+		BE801B6D10154C5D7FE37CFC636BC1FC /* iosSinovoLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iosSinovoLibrary.framework; path = iosSinovoLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1D901AA780D482D47459D2C3828C658 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C2ACBEF782B5224F9AE303A81FCA0C04 /* IotLinkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IotLinkKit.framework; path = "iot-linkkit/IotLinkKit.framework"; sourceTree = "<group>"; };
+		C2F8F502587A8526B08F23A149997765 /* DFUCharacteristic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUCharacteristic.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUCharacteristic.swift; sourceTree = "<group>"; };
+		C5FD8BD5937F472BBAF8C3BC86F22A64 /* IMSLog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IMSLog.debug.xcconfig; sourceTree = "<group>"; };
+		C7D624591D7839E7CA8630F3A80FDB5F /* DFUVersion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUVersion.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Characteristics/DFUVersion.swift; sourceTree = "<group>"; };
+		C86C3B6F1D2B5BBEC49DC0E0C6CC3182 /* DFUPeripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPeripheral.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUPeripheral.swift; sourceTree = "<group>"; };
+		CCC2F395CD1546AB063D0840239AFD8F /* LoggerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoggerDelegate.swift; path = iOSDFULibrary/Classes/Utilities/Logging/LoggerDelegate.swift; sourceTree = "<group>"; };
+		CE1CEA580C02EA2ABA803B3D6303FC8D /* DFUExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUExecutor.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUExecutor.swift; sourceTree = "<group>"; };
+		CE3CB1222FA12572E40429ABB1ABD339 /* Pods-iosSinovoLibrary_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iosSinovoLibrary_Example.modulemap"; sourceTree = "<group>"; };
+		D0FAFD9A6771BFFC10DEECA7F01939A3 /* DFUServiceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUServiceController.swift; path = iOSDFULibrary/Classes/Implementation/DFUServiceController.swift; sourceTree = "<group>"; };
+		D2A1467EAC925F5BC0903C109F87E8C4 /* DFUStarterPeripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStarterPeripheral.swift; path = iOSDFULibrary/Classes/Implementation/DFUSelector/DFUStarterPeripheral.swift; sourceTree = "<group>"; };
+		D4B86F4E92D0CE3BAA47DD3861C31B43 /* Pods-iosSinovoLibrary_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iosSinovoLibrary_Tests-umbrella.h"; sourceTree = "<group>"; };
+		D64A3DA6600D8EACC6312805B08FE866 /* Pods-iosSinovoLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iosSinovoLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D7EBB6B1165C29DE36A86F2ACBD32A43 /* LegacyDFUService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUService.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Services/LegacyDFUService.swift; sourceTree = "<group>"; };
+		D7F078E41DED97A7718BBAB6AE97AE9B /* DFUControlPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUControlPoint.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Characteristics/DFUControlPoint.swift; sourceTree = "<group>"; };
+		D9617ED54AF49E501D977424725EE1DD /* iOSDFULibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDFULibrary.release.xcconfig; sourceTree = "<group>"; };
+		DE686CEAA2020BC9268B45F4585D38DF /* crc32.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = crc32.swift; path = iOSDFULibrary/Classes/Utilities/crc32.swift; sourceTree = "<group>"; };
+		E33AA911EA4B5D293CF6BEC8A7099750 /* iOSDFULibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDFULibrary-prefix.pch"; sourceTree = "<group>"; };
+		E5C419772634A399612A6C17056D724F /* Archive+MemoryFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Archive+MemoryFile.swift"; path = "Sources/ZIPFoundation/Archive+MemoryFile.swift"; sourceTree = "<group>"; };
+		E7B7EF3686D9F9C1F9747F7E59D36FF5 /* ZIPFoundation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZIPFoundation-prefix.pch"; sourceTree = "<group>"; };
+		EA2580AD53BAA31ECD6CB9328D790280 /* SecureDFUPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUPacket.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Characteristics/SecureDFUPacket.swift; sourceTree = "<group>"; };
+		EBA74DA2B26A0DA86948BF039B00A5C1 /* Pods_iosSinovoLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iosSinovoLibrary_Tests.framework; path = "Pods-iosSinovoLibrary_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC468AAC27DBD1E873834C11F4F4906C /* DFUPeripheralSelectorDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPeripheralSelectorDelegate.swift; path = iOSDFULibrary/Classes/Implementation/DFUPeripheralSelectorDelegate.swift; sourceTree = "<group>"; };
+		F21814261C3721B88631E5D7E1729110 /* DFUStreamBin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStreamBin.swift; path = iOSDFULibrary/Classes/Utilities/Streams/DFUStreamBin.swift; sourceTree = "<group>"; };
+		F73DFE7F5A20ADCEF120C4279A8967C4 /* IMSLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IMSLog.framework; path = IMSLog/IMSLog.framework; sourceTree = "<group>"; };
+		F92C973BA7FE16F0C17EAEF8BCADCE67 /* Pods-iosSinovoLibrary_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iosSinovoLibrary_Example-dummy.m"; sourceTree = "<group>"; };
+		FD20B095DE9C13A552E08293842E7CC6 /* Double.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Double.swift; path = iOSDFULibrary/Classes/Utilities/Double.swift; sourceTree = "<group>"; };
+		FE1993BB1A9F356AFFC996FCC7730031 /* Data+Compression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Compression.swift"; path = "Sources/ZIPFoundation/Data+Compression.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,88 +300,190 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		39BB691EA19284F7ED03D1EFBDE7AACA /* Frameworks */ = {
+		162D4D5A55FB6B5B8A3DDE9C2FCA1627 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2119FBB08073B01CCA9F0EFA37ABBCE9 /* Foundation.framework in Frameworks */,
+				E4C7ACB744B2F7E2D84143ABB617CBC8 /* Foundation.framework in Frameworks */,
+				50B861C3555739A225AED58DC86CE83A /* ZIPFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1A72E32570E48DC3733E61264E3B3F8 /* Frameworks */ = {
+		8E565D25763CDCD28B0AD728BDD2C0EA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D4799F02B5442962625C7FDA82BDF89 /* Foundation.framework in Frameworks */,
+				79F231007AC7A6733C4B80B4B9418500 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		944271B8451E014BB6CEDE55F9FBFD7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75BD3167722E2BF167AC2F44A947D727 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE63A607A86CCBFAC26E7C79D1396101 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093BF537E5867D5CF044B9EA4E9EA3B3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		010D93F63FFEEA6453B54AB773F7BC69 /* IotLinkKit */ = {
+		069B2E86CCE531785BDE8998AFC1E065 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3BA21E58351070D82A077DF57E349851 /* Frameworks */,
-				90985C401D45A55BF37FBB058FBBF725 /* Resources */,
-				35F2F9BE0825C5DF5757CEC4B80D4ECA /* Support Files */,
-			);
-			path = IotLinkKit;
-			sourceTree = "<group>";
-		};
-		0CD21079FD24DBAD1C37DB6A0E810BB4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BE801B6D10154C5D7FE37CFC636BC1FC /* iosSinovoLibrary.framework */,
-				06EC7F031A35D9E1054C51584E221B6D /* Pods_iosSinovoLibrary_Example.framework */,
-				EBA74DA2B26A0DA86948BF039B00A5C1 /* Pods_iosSinovoLibrary_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		35F2F9BE0825C5DF5757CEC4B80D4ECA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DED53557ACED65B9A610DD77D9882F6C /* IotLinkKit.debug.xcconfig */,
-				702D1DC96D1C5361E16DC570E143A9BC /* IotLinkKit.release.xcconfig */,
+				54205983F2312F01999B255B06B52382 /* IotLinkKit.debug.xcconfig */,
+				4EABFE8870FCB5EE6AF078CE40BBE2BA /* IotLinkKit.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/IotLinkKit";
 			sourceTree = "<group>";
 		};
-		3BA21E58351070D82A077DF57E349851 /* Frameworks */ = {
+		0908B4F8933F010DCDA27EA6322F6DF1 /* Pods-iosSinovoLibrary_Example */ = {
 			isa = PBXGroup;
 			children = (
-				386528DC7CE74E20A35714E723DA8B18 /* AlinkIoTExpress.framework */,
-				37DC0A7358F57B658BBA43980E52EEC7 /* AlinkMobileGateway.framework */,
-				E5F385CF3FE177F3B55028AE7CF813E6 /* IotLinkKit.framework */,
+				CE3CB1222FA12572E40429ABB1ABD339 /* Pods-iosSinovoLibrary_Example.modulemap */,
+				0177AE6C94E1CB5AD72E87549EF17A8C /* Pods-iosSinovoLibrary_Example-acknowledgements.markdown */,
+				96844129C63A52BCD07449A2F87F7A82 /* Pods-iosSinovoLibrary_Example-acknowledgements.plist */,
+				F92C973BA7FE16F0C17EAEF8BCADCE67 /* Pods-iosSinovoLibrary_Example-dummy.m */,
+				B7FEB0758161F4BC60B93FD4EB419AE6 /* Pods-iosSinovoLibrary_Example-frameworks.sh */,
+				9B001020CB45FF82328464F0BDF39C0D /* Pods-iosSinovoLibrary_Example-Info.plist */,
+				33CF47C96127F8813D07E514FA4D636F /* Pods-iosSinovoLibrary_Example-resources.sh */,
+				5F47CFFD13134F1EA3C603DD2C73A806 /* Pods-iosSinovoLibrary_Example-umbrella.h */,
+				D64A3DA6600D8EACC6312805B08FE866 /* Pods-iosSinovoLibrary_Example.debug.xcconfig */,
+				34D43293BB7DC3F2F22ECED07C91DAF0 /* Pods-iosSinovoLibrary_Example.release.xcconfig */,
+			);
+			name = "Pods-iosSinovoLibrary_Example";
+			path = "Target Support Files/Pods-iosSinovoLibrary_Example";
+			sourceTree = "<group>";
+		};
+		16AF4C63922BC41030AA58A3D1F3E7AB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5FD8BD5937F472BBAF8C3BC86F22A64 /* IMSLog.debug.xcconfig */,
+				A0AD8526C6ADD4CB0934EE472345945E /* IMSLog.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IMSLog";
+			sourceTree = "<group>";
+		};
+		1ACA7063B0F9853EBAF5ED2F8B4B7152 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				47CC7EAD6C09744C00803E800387D184 /* iOSDFULibrary.modulemap */,
+				14F6860A8ECF5066C59427A0B76291D5 /* iOSDFULibrary-dummy.m */,
+				3EB060D02AD7B95808C2FD48DB92121D /* iOSDFULibrary-Info.plist */,
+				E33AA911EA4B5D293CF6BEC8A7099750 /* iOSDFULibrary-prefix.pch */,
+				6B04BBE96D23FE5F280BC4EC9CCDB6A6 /* iOSDFULibrary-umbrella.h */,
+				7665993BF8D21C08DFA39B95220FCCBC /* iOSDFULibrary.debug.xcconfig */,
+				D9617ED54AF49E501D977424725EE1DD /* iOSDFULibrary.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/iOSDFULibrary";
+			sourceTree = "<group>";
+		};
+		1F6216BEF7894923DDAA6CB6D8F90490 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F73DFE7F5A20ADCEF120C4279A8967C4 /* IMSLog.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+		3D80A1D8259BB2395E9840F57AFE7F74 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+				C1D901AA780D482D47459D2C3828C658 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		64D8D45FA8CECE9C4EFD39E0CE933962 /* Pods */ = {
+		4D2C317CDF1358FACFD3573E196A71C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				66CA2636587996A4CAB03DCA19835B62 /* IMSLog */,
-				010D93F63FFEEA6453B54AB773F7BC69 /* IotLinkKit */,
+				5ACB827D79A4558F979CA1F5CDBD95B4 /* ZIPFoundation.framework */,
+				3D80A1D8259BB2395E9840F57AFE7F74 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DA1E929C26187D5B2112258F3774B1D /* ZIPFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				304DD4D1EA8C560CB0CEDA295D7963E8 /* Archive.swift */,
+				E5C419772634A399612A6C17056D724F /* Archive+MemoryFile.swift */,
+				2F36AF0B0B4ED7D6CA8C3B40CC52C028 /* Archive+Reading.swift */,
+				0617CF9F2C75EA14F3C48BF6EF45E7B3 /* Archive+Writing.swift */,
+				FE1993BB1A9F356AFFC996FCC7730031 /* Data+Compression.swift */,
+				2287BD78AF2A0E72E4EC1DB38E89E5FA /* Data+Serialization.swift */,
+				B265CAD1797FAD652CD391F9E9BA912D /* Entry.swift */,
+				A6FCE9160537870F63C15BE9C028038F /* FileManager+ZIP.swift */,
+				BF3AABAAE63DAE7147EC136F71736205 /* Support Files */,
+			);
+			name = ZIPFoundation;
+			path = ZIPFoundation;
+			sourceTree = "<group>";
+		};
+		4F5E07B875C103D650FDF6056D42FBD0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BBC8E20313D26CDBD6F0131F3947A1E /* IMSLog */,
+				EFB6987570B52B1C70EC33F0BBE5453E /* iOSDFULibrary */,
+				82E3B99E5B56FBBE0C5F972AC51234B2 /* IotLinkKit */,
+				4DA1E929C26187D5B2112258F3774B1D /* ZIPFoundation */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		66CA2636587996A4CAB03DCA19835B62 /* IMSLog */ = {
+		55887367C6364DAFB8211AE6E2BA37EA /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AA4A020117E079185CABEF11C498723B /* Frameworks */,
-				9E6346DC6F15F0422F5C04CCF7B08CB1 /* Support Files */,
+				0908B4F8933F010DCDA27EA6322F6DF1 /* Pods-iosSinovoLibrary_Example */,
+				655A643F16050305D40AA8D1AB3B1436 /* Pods-iosSinovoLibrary_Tests */,
 			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		655A643F16050305D40AA8D1AB3B1436 /* Pods-iosSinovoLibrary_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				079FFC626FFF87FB45622F5683F5549D /* Pods-iosSinovoLibrary_Tests.modulemap */,
+				8973FD028409C25DA25385EDF0F327AD /* Pods-iosSinovoLibrary_Tests-acknowledgements.markdown */,
+				6D1CE82C6854BA975D5A56FF9C119B7C /* Pods-iosSinovoLibrary_Tests-acknowledgements.plist */,
+				3B5EEF5878B78D5EB94CA9B9FD2D060E /* Pods-iosSinovoLibrary_Tests-dummy.m */,
+				6855F92596031F04F2583610DBE90747 /* Pods-iosSinovoLibrary_Tests-Info.plist */,
+				D4B86F4E92D0CE3BAA47DD3861C31B43 /* Pods-iosSinovoLibrary_Tests-umbrella.h */,
+				0AF177CA6036295E0E713ED840E9CA48 /* Pods-iosSinovoLibrary_Tests.debug.xcconfig */,
+				3A5104C5652D584087FD6E06392BBC38 /* Pods-iosSinovoLibrary_Tests.release.xcconfig */,
+			);
+			name = "Pods-iosSinovoLibrary_Tests";
+			path = "Target Support Files/Pods-iosSinovoLibrary_Tests";
+			sourceTree = "<group>";
+		};
+		66B1E123F3987E25E1E4492A1DD0CD76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				178B070220F31F7FC67EC931205D5621 /* AlinkIoTExpress.framework */,
+				AB5EFD332BCD89030D00C767C22CB3B5 /* AlinkMobileGateway.framework */,
+				C2ACBEF782B5224F9AE303A81FCA0C04 /* IotLinkKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BBC8E20313D26CDBD6F0131F3947A1E /* IMSLog */ = {
+			isa = PBXGroup;
+			children = (
+				1F6216BEF7894923DDAA6CB6D8F90490 /* Frameworks */,
+				16AF4C63922BC41030AA58A3D1F3E7AB /* Support Files */,
+			);
+			name = IMSLog;
 			path = IMSLog;
 			sourceTree = "<group>";
 		};
@@ -234,26 +495,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8690CB117FDEB4697483D63F0976C906 /* Pods-iosSinovoLibrary_Tests */ = {
+		82E3B99E5B56FBBE0C5F972AC51234B2 /* IotLinkKit */ = {
 			isa = PBXGroup;
 			children = (
-				4BB4078B6E6295B30731C14265DA6F01 /* Pods-iosSinovoLibrary_Tests.modulemap */,
-				D18D4ADF7FEED0F59EBFBCE37E7F120B /* Pods-iosSinovoLibrary_Tests-acknowledgements.markdown */,
-				3007F6AE5FDABA21AFAAC1EE54FCE3CD /* Pods-iosSinovoLibrary_Tests-acknowledgements.plist */,
-				30D167E9C74414B0A79CF8200F96D05A /* Pods-iosSinovoLibrary_Tests-dummy.m */,
-				A5D14B36FE6D12674E23617FE0EB9AA4 /* Pods-iosSinovoLibrary_Tests-Info.plist */,
-				5C4EF5EADAEFE4EE9BC57E852C386CE9 /* Pods-iosSinovoLibrary_Tests-umbrella.h */,
-				AABA7C59045789FCB4EFFB0706760A9F /* Pods-iosSinovoLibrary_Tests.debug.xcconfig */,
-				41DFFFA350014B4F03EEB48E52C16251 /* Pods-iosSinovoLibrary_Tests.release.xcconfig */,
+				66B1E123F3987E25E1E4492A1DD0CD76 /* Frameworks */,
+				9144C0A3AD095576DAE7CC095DBAC4FC /* Resources */,
+				069B2E86CCE531785BDE8998AFC1E065 /* Support Files */,
 			);
-			name = "Pods-iosSinovoLibrary_Tests";
-			path = "Target Support Files/Pods-iosSinovoLibrary_Tests";
+			name = IotLinkKit;
+			path = IotLinkKit;
 			sourceTree = "<group>";
 		};
-		90985C401D45A55BF37FBB058FBBF725 /* Resources */ = {
+		9144C0A3AD095576DAE7CC095DBAC4FC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FC30AE1CBA6108494AF98CAFA7EC727C /* cafile.bundle */,
+				80D3B3A7D5C23658F064D59548717656 /* cafile.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -273,16 +529,6 @@
 			path = "Example/Pods/Target Support Files/iosSinovoLibrary";
 			sourceTree = "<group>";
 		};
-		9E6346DC6F15F0422F5C04CCF7B08CB1 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9C1F50286BFC378670E48B714FFA40E9 /* IMSLog.debug.xcconfig */,
-				6C25B18EF4ED13C45A2A2093F6B49483 /* IMSLog.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/IMSLog";
-			sourceTree = "<group>";
-		};
 		A8064E6AEEC7DEABA5B60A01838063E1 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,38 +537,31 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		AA4A020117E079185CABEF11C498723B /* Frameworks */ = {
+		BD485ACBA752F1CAED26F30F10FC129F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0E75AC9208EDBA0A395C606AA943693E /* IMSLog.framework */,
+				21B1375088A0310C7AE2BE4C8188D12F /* iOSDFULibrary.framework */,
+				BE801B6D10154C5D7FE37CFC636BC1FC /* iosSinovoLibrary.framework */,
+				06EC7F031A35D9E1054C51584E221B6D /* Pods_iosSinovoLibrary_Example.framework */,
+				EBA74DA2B26A0DA86948BF039B00A5C1 /* Pods_iosSinovoLibrary_Tests.framework */,
+				48A4A6EDC08C8AC933D0DCD507E9D173 /* ZIPFoundation.framework */,
 			);
-			name = Frameworks;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		B55E2409B6E510560F1D63DB4E0740C8 /* Targets Support Files */ = {
+		BF3AABAAE63DAE7147EC136F71736205 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C7EEA7767C32F4CECD1DC420BC4B9726 /* Pods-iosSinovoLibrary_Example */,
-				8690CB117FDEB4697483D63F0976C906 /* Pods-iosSinovoLibrary_Tests */,
+				6BD43907BE56EE90BCAB0D69BD437F64 /* ZIPFoundation.modulemap */,
+				87BB13EFC7589A4C3852AB465E22B1F5 /* ZIPFoundation-dummy.m */,
+				A5E943BBEFF87548AA5D5A548AAFB90B /* ZIPFoundation-Info.plist */,
+				E7B7EF3686D9F9C1F9747F7E59D36FF5 /* ZIPFoundation-prefix.pch */,
+				93D73C74626310430F38332618E79AEC /* ZIPFoundation-umbrella.h */,
+				2EBBE89DE8CB2FF18BCD13CA3F8D42AD /* ZIPFoundation.debug.xcconfig */,
+				927D1572431243D9712C35E0BDC13547 /* ZIPFoundation.release.xcconfig */,
 			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		C7EEA7767C32F4CECD1DC420BC4B9726 /* Pods-iosSinovoLibrary_Example */ = {
-			isa = PBXGroup;
-			children = (
-				9AEF76A8639E2AED5DE9FBFA7FE4EFC6 /* Pods-iosSinovoLibrary_Example.modulemap */,
-				DF6F9C7F94BC90067DC6EA11F2523B26 /* Pods-iosSinovoLibrary_Example-acknowledgements.markdown */,
-				5447771DA2DBA28A080FFCD733825C93 /* Pods-iosSinovoLibrary_Example-acknowledgements.plist */,
-				A699B80EFBAD9317A7297561744E53A8 /* Pods-iosSinovoLibrary_Example-dummy.m */,
-				024E1DB072AF2C305F6F8605AA6A996B /* Pods-iosSinovoLibrary_Example-Info.plist */,
-				0E1D5521D25A131E22B0ED12AE1AFA94 /* Pods-iosSinovoLibrary_Example-resources.sh */,
-				2DCAB8487A992832D0CD07B8546B9703 /* Pods-iosSinovoLibrary_Example-umbrella.h */,
-				9A28143E046A2CD88B3D920FEBEA4CE4 /* Pods-iosSinovoLibrary_Example.debug.xcconfig */,
-				D9B94DCADDD175C276AEC8AC7E906FE3 /* Pods-iosSinovoLibrary_Example.release.xcconfig */,
-			);
-			name = "Pods-iosSinovoLibrary_Example";
-			path = "Target Support Files/Pods-iosSinovoLibrary_Example";
+			name = "Support Files";
+			path = "../Target Support Files/ZIPFoundation";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -330,10 +569,10 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				A8064E6AEEC7DEABA5B60A01838063E1 /* Development Pods */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				64D8D45FA8CECE9C4EFD39E0CE933962 /* Pods */,
-				0CD21079FD24DBAD1C37DB6A0E810BB4 /* Products */,
-				B55E2409B6E510560F1D63DB4E0740C8 /* Targets Support Files */,
+				4D2C317CDF1358FACFD3573E196A71C8 /* Frameworks */,
+				4F5E07B875C103D650FDF6056D42FBD0 /* Pods */,
+				BD485ACBA752F1CAED26F30F10FC129F /* Products */,
+				55887367C6364DAFB8211AE6E2BA37EA /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -347,17 +586,64 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		EFB6987570B52B1C70EC33F0BBE5453E /* iOSDFULibrary */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				85EC7361731B001272D863838A3D69D5 /* ButtonlessDFU.swift */,
+				DE686CEAA2020BC9268B45F4585D38DF /* crc32.swift */,
+				451CE3969E3E098E0EACE7494418C5F9 /* Data.swift */,
+				C2F8F502587A8526B08F23A149997765 /* DFUCharacteristic.swift */,
+				0970D093823AC494D458AB4060D546CE /* DFUController.swift */,
+				D7F078E41DED97A7718BBAB6AE97AE9B /* DFUControlPoint.swift */,
+				CE1CEA580C02EA2ABA803B3D6303FC8D /* DFUExecutor.swift */,
+				990B4B516C19FBC8799FEAD970E1EB1D /* DFUFirmware.swift */,
+				6B49E5D85CBAF0C91E763D836E72AC1C /* DFUPacket.swift */,
+				C86C3B6F1D2B5BBEC49DC0E0C6CC3182 /* DFUPeripheral.swift */,
+				B320A20E7FC09E7593BC0C84F70BC453 /* DFUPeripheralDelegate.swift */,
+				2B4FFDD5F92A0D256D5BB32BC507EA9E /* DFUPeripheralSelector.swift */,
+				EC468AAC27DBD1E873834C11F4F4906C /* DFUPeripheralSelectorDelegate.swift */,
+				A63733E38585A054B18318779E26838E /* DFUService.swift */,
+				D0FAFD9A6771BFFC10DEECA7F01939A3 /* DFUServiceController.swift */,
+				7C7A231639F2EBA4EA4D9CBDC2D48F6C /* DFUServiceDelegate.swift */,
+				B4C2C74910DAAC247C091CEE9276F69E /* DFUServiceInitiator.swift */,
+				A48CBF686D19A97CCC0A5FAA8F85C727 /* DFUServiceSelector.swift */,
+				D2A1467EAC925F5BC0903C109F87E8C4 /* DFUStarterPeripheral.swift */,
+				9C76843A71D7F571F542BC81E8668BFD /* DFUStream.swift */,
+				F21814261C3721B88631E5D7E1729110 /* DFUStreamBin.swift */,
+				65E114ED7B7949090FF7E5C5FE747C7F /* DFUStreamHex.swift */,
+				A3708C58019C56CE9DB3E61A5AD89E84 /* DFUStreamZip.swift */,
+				46E04FB720DF905F603BFD416A997503 /* DFUUuidHelper.swift */,
+				C7D624591D7839E7CA8630F3A80FDB5F /* DFUVersion.swift */,
+				FD20B095DE9C13A552E08293842E7CC6 /* Double.swift */,
+				60554C6AC8F0A01886532F413D110AAC /* IntelHex2BinConverter.swift */,
+				0B4F193662B4CDD7AD3D6D1206E36795 /* LegacyDFUExecutor.swift */,
+				94BAF657DDD93218882257E66E663FD3 /* LegacyDFUPeripheral.swift */,
+				A23BC635529BB878F091C120AB55EC95 /* LegacyDFUPeripheralDelegate.swift */,
+				D7EBB6B1165C29DE36A86F2ACBD32A43 /* LegacyDFUService.swift */,
+				43F126B67F4D96319D4E68E089FCB3BE /* LegacyDFUServiceInitiator.swift */,
+				CCC2F395CD1546AB063D0840239AFD8F /* LoggerDelegate.swift */,
+				46B3D99089F361A2C0E2A949A995B2E2 /* LoggerHelper.swift */,
+				0714045D6AF10ECBCE8EEDF2BE2F5AD4 /* Manifest.swift */,
+				BAE64352AA9DFA17B01047EF39E2EF4A /* ManifestFirmwareInfo.swift */,
+				9125FB7428926DEC1E443275263611C5 /* SecureDFUControlPoint.swift */,
+				088EF27354F64110FE6773C6B0486B92 /* SecureDFUExecutor.swift */,
+				EA2580AD53BAA31ECD6CB9328D790280 /* SecureDFUPacket.swift */,
+				728C554115417EA53509AB2EC72DAD9A /* SecureDFUPeripheral.swift */,
+				B3FC5459FE6D3AB96606E45EB191D574 /* SecureDFUPeripheralDelegate.swift */,
+				9EB1B5980B9E4007DC97F9B596CFC2B2 /* SecureDFUService.swift */,
+				8E9DBB6CAED2FCE08CEF1EB8C253F5E0 /* SecureDFUServiceInitiator.swift */,
+				9DBD39AD7116D13000B15DD0A267E34E /* SoftdeviceBootloaderInfo.swift */,
+				0B9F0DE0C7777D5738EFD05C832CE644 /* ZipArchive.swift */,
+				1ACA7063B0F9853EBAF5ED2F8B4B7152 /* Support Files */,
 			);
-			name = Frameworks;
+			name = iOSDFULibrary;
+			path = iOSDFULibrary;
 			sourceTree = "<group>";
 		};
 		F6D9B1407A13C63986B52276C5F375F2 /* iosSinovoLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				432F03B7E5DB7BD3E93D0FA63C4EEF0B /* ReplaceMe.m */,
 				803DDC67041A5C4CDD32705CF2FC1B51 /* Frameworks */,
 				D0B814EA21F748FB54D53916983D0820 /* Pod */,
 				99F248FC888EE6B5BEEEAC6AB18BACE2 /* Support Files */,
@@ -369,19 +655,35 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		38445E0D26DCA9973197E04F2FE92484 /* Headers */ = {
+		094B73BFDAB5F65AEAB2AF03157FE417 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E0E85B59801DB93895E7C60800ACC70 /* iosSinovoLibrary-umbrella.h in Headers */,
+				75C54C98E53CE6160583F54F44B79F1E /* ZIPFoundation-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3E40A646AE427A84471AF0268C64D55D /* Headers */ = {
+		13D5E2A76826E3D36DA82CDFCEF0C8E2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AEB5CAD643660F3F6AEBABD5A357268 /* Pods-iosSinovoLibrary_Example-umbrella.h in Headers */,
+				6C8D39701CF54B3DE288D92616BF871C /* Pods-iosSinovoLibrary_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B8281C1913B565DF66B7A4F9D1F4921 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C789A19CB5E81BE5E984A7DC173132BD /* iOSDFULibrary-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		799C1988A4FE800DD16C171681BC1D71 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9EA9ABF4D1361C2861449DD331B63F7 /* iosSinovoLibrary-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,19 +700,21 @@
 /* Begin PBXNativeTarget section */
 		0D5EB99D1BBCB85D00FA28289177C538 /* Pods-iosSinovoLibrary_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50E72F50E17FD2E26EB7EDFBD3EAD2C0 /* Build configuration list for PBXNativeTarget "Pods-iosSinovoLibrary_Example" */;
+			buildConfigurationList = 9AD3E0E4E5E198F593C900C52CB91496 /* Build configuration list for PBXNativeTarget "Pods-iosSinovoLibrary_Example" */;
 			buildPhases = (
-				3E40A646AE427A84471AF0268C64D55D /* Headers */,
-				224E4398A0AA3F100115590D48641CCD /* Sources */,
-				39BB691EA19284F7ED03D1EFBDE7AACA /* Frameworks */,
-				9651933D844E73116DC73300910972C7 /* Resources */,
+				13D5E2A76826E3D36DA82CDFCEF0C8E2 /* Headers */,
+				25B954AFD47DAA2371998BB1B5B7137C /* Sources */,
+				944271B8451E014BB6CEDE55F9FBFD7A /* Frameworks */,
+				3EABC382A7F8A5DD2EFDBED68A3D2A2A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				001DAD5122EE9A1029605158EAD2FB87 /* PBXTargetDependency */,
-				208027CC509B9C82D225C89A1BDEFD83 /* PBXTargetDependency */,
-				04B6E9B898749474CE4FDFA0E51E23EC /* PBXTargetDependency */,
+				FE858BB7CCD330066FDA0E606259B7F1 /* PBXTargetDependency */,
+				1BE90B0B4AAA80398A3B0DEF81B52975 /* PBXTargetDependency */,
+				A17528981B99126ED804A9F3A94A2397 /* PBXTargetDependency */,
+				CC88EFEABED0F84E30BACF1D4D895453 /* PBXTargetDependency */,
+				02134E471A577B126EB2AD5EB6244E09 /* PBXTargetDependency */,
 			);
 			name = "Pods-iosSinovoLibrary_Example";
 			productName = "Pods-iosSinovoLibrary_Example";
@@ -429,30 +733,68 @@
 			buildRules = (
 			);
 			dependencies = (
-				F307241A987A2E817636810DA89B2229 /* PBXTargetDependency */,
+				B5BED4EEDBD72A42AE5B7FBBE100A5C4 /* PBXTargetDependency */,
 			);
 			name = "Pods-iosSinovoLibrary_Tests";
 			productName = "Pods-iosSinovoLibrary_Tests";
 			productReference = EBA74DA2B26A0DA86948BF039B00A5C1 /* Pods_iosSinovoLibrary_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A4836E8A2CE21326895499C8A731D078 /* iosSinovoLibrary */ = {
+		9506C7FCDAE6E6967A99655F452EEE93 /* iOSDFULibrary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E9100961DFD70296228F65A4C4DC071 /* Build configuration list for PBXNativeTarget "iosSinovoLibrary" */;
+			buildConfigurationList = 6CED6563826E9632E106906A6AF85717 /* Build configuration list for PBXNativeTarget "iOSDFULibrary" */;
 			buildPhases = (
-				38445E0D26DCA9973197E04F2FE92484 /* Headers */,
-				4114B28B1D4093B9556D974A0B7FEE9F /* Sources */,
-				D1A72E32570E48DC3733E61264E3B3F8 /* Frameworks */,
-				3F2B9278271A1CDA8BF4267F592E2792 /* Resources */,
+				6B8281C1913B565DF66B7A4F9D1F4921 /* Headers */,
+				F93958E2AAE22D268B80E138DDC9EB96 /* Sources */,
+				162D4D5A55FB6B5B8A3DDE9C2FCA1627 /* Frameworks */,
+				0D3D9B140EF483993B6753318A439C13 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0A81F5F7E99019D17A77E4C54406EC85 /* PBXTargetDependency */,
+				F0788EC8AF49E784A5C353A14F9C7B0B /* PBXTargetDependency */,
+			);
+			name = iOSDFULibrary;
+			productName = iOSDFULibrary;
+			productReference = 21B1375088A0310C7AE2BE4C8188D12F /* iOSDFULibrary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A4836E8A2CE21326895499C8A731D078 /* iosSinovoLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 811C97489C0507142F44EC0D657236E7 /* Build configuration list for PBXNativeTarget "iosSinovoLibrary" */;
+			buildPhases = (
+				799C1988A4FE800DD16C171681BC1D71 /* Headers */,
+				D704105335AA9E0B07704DCECE39F96A /* Sources */,
+				AE63A607A86CCBFAC26E7C79D1396101 /* Frameworks */,
+				923FBFD7215CCBF3510BEC93DF5DC0F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				742EE68BE12104C8457B785585BFD130 /* PBXTargetDependency */,
+				14A01DA26C507DB032A9D4F9E26251C9 /* PBXTargetDependency */,
 			);
 			name = iosSinovoLibrary;
 			productName = iosSinovoLibrary;
 			productReference = BE801B6D10154C5D7FE37CFC636BC1FC /* iosSinovoLibrary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA15C8469D67684160CC2A7098EB841C /* ZIPFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AADE132E33070DFA47CD5D0C857E862E /* Build configuration list for PBXNativeTarget "ZIPFoundation" */;
+			buildPhases = (
+				094B73BFDAB5F65AEAB2AF03157FE417 /* Headers */,
+				2615FC838583F8AE33E8B55D9B9EBCA1 /* Sources */,
+				8E565D25763CDCD28B0AD728BDD2C0EA /* Frameworks */,
+				A48E4AB2A408EE1955153364CA6CD27B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZIPFoundation;
+			productName = ZIPFoundation;
+			productReference = 48A4A6EDC08C8AC933D0DCD507E9D173 /* ZIPFoundation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -473,21 +815,30 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 0CD21079FD24DBAD1C37DB6A0E810BB4 /* Products */;
+			productRefGroup = BD485ACBA752F1CAED26F30F10FC129F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A2A523E6D90FF53AA039C147829BDA15 /* IMSLog */,
+				9506C7FCDAE6E6967A99655F452EEE93 /* iOSDFULibrary */,
 				A4836E8A2CE21326895499C8A731D078 /* iosSinovoLibrary */,
 				F4FBE466B0DF6B7512E21301739DB3A3 /* IotLinkKit */,
 				0D5EB99D1BBCB85D00FA28289177C538 /* Pods-iosSinovoLibrary_Example */,
 				71BDDA087AD3D2084DC0E1E9B080A620 /* Pods-iosSinovoLibrary_Tests */,
+				AA15C8469D67684160CC2A7098EB841C /* ZIPFoundation */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3F2B9278271A1CDA8BF4267F592E2792 /* Resources */ = {
+		0D3D9B140EF483993B6753318A439C13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EABC382A7F8A5DD2EFDBED68A3D2A2A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -501,7 +852,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9651933D844E73116DC73300910972C7 /* Resources */ = {
+		923FBFD7215CCBF3510BEC93DF5DC0F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A48E4AB2A408EE1955153364CA6CD27B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -511,14 +869,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		224E4398A0AA3F100115590D48641CCD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8100E8EFE67307717CC4FDBCFCD52DFC /* Pods-iosSinovoLibrary_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		254668AAD1ACC9386EB6A0916CFE1637 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -527,56 +877,190 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4114B28B1D4093B9556D974A0B7FEE9F /* Sources */ = {
+		25B954AFD47DAA2371998BB1B5B7137C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F12C95A35C06D92D43AAD8C3337121E5 /* iosSinovoLibrary-dummy.m in Sources */,
+				1AAB1C022012C931474B2F7186975AAA /* Pods-iosSinovoLibrary_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2615FC838583F8AE33E8B55D9B9EBCA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD98CFC4BA7ECBC4A307831716A1A9A8 /* Archive+MemoryFile.swift in Sources */,
+				C71DDE4CE526BBF6D6F70AEB700BA989 /* Archive+Reading.swift in Sources */,
+				C05876E1A230253564A273EE417A5949 /* Archive+Writing.swift in Sources */,
+				A94D81B3E4AEEABDF74E1C8777FD449F /* Archive.swift in Sources */,
+				B49C4A24ECDADD5E992EC563A5CBD29B /* Data+Compression.swift in Sources */,
+				D81D99A1BC5943D4D14B3354B07ABF16 /* Data+Serialization.swift in Sources */,
+				6D5EB5FCED6621F96DB2301CA65655F5 /* Entry.swift in Sources */,
+				ED14BB5948998D551A7CD4FE7E0B403A /* FileManager+ZIP.swift in Sources */,
+				F8ADB4B0CF3BD2A5A82023D169C7C4E7 /* ZIPFoundation-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D704105335AA9E0B07704DCECE39F96A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43ED220E4D8670A3B6C8848AE33E07A9 /* iosSinovoLibrary-dummy.m in Sources */,
+				69809DB5E45F0FDCE1E7830CC3AEE715 /* ReplaceMe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93958E2AAE22D268B80E138DDC9EB96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C5D2E7EBA98F1E8B703B6430AFF0C41 /* ButtonlessDFU.swift in Sources */,
+				0808AD4BBF47A04DBA254FD581AF875A /* crc32.swift in Sources */,
+				D11E92E26D8FEE17FA7652BCF05641E7 /* Data.swift in Sources */,
+				C3F2C0D0DA9E592F9DDB02CCE8E82404 /* DFUCharacteristic.swift in Sources */,
+				49BAF27F73C47ED99C84005A746E5AC2 /* DFUController.swift in Sources */,
+				057997576317412A9639BB18930928B2 /* DFUControlPoint.swift in Sources */,
+				90C942082F4DA6B2D0E1A846F4681983 /* DFUExecutor.swift in Sources */,
+				CC0E39690CAC6E6B56B1EE100F6C57AD /* DFUFirmware.swift in Sources */,
+				42D5E28A25C364DCD9E9AB675CFF4B97 /* DFUPacket.swift in Sources */,
+				632A8A37ED9BE935A3A3E9F8525ECE28 /* DFUPeripheral.swift in Sources */,
+				ECF9D1E2F2750D71A1CE526153131786 /* DFUPeripheralDelegate.swift in Sources */,
+				D9C613356C5D83213B8AEC9B7EA33E10 /* DFUPeripheralSelector.swift in Sources */,
+				E5857E16426319AE0B61118AFADE06E1 /* DFUPeripheralSelectorDelegate.swift in Sources */,
+				8FB2A0272EE03C90F84353273D292F95 /* DFUService.swift in Sources */,
+				8A887C2BD7FC11DA7D791E06997E25A6 /* DFUServiceController.swift in Sources */,
+				27E097A183A627AE5688F3514B1F0F51 /* DFUServiceDelegate.swift in Sources */,
+				6BEBC001E591B356A22F75A48FB0019E /* DFUServiceInitiator.swift in Sources */,
+				E08BDB0B608E8C40DDA7F849D3C1476D /* DFUServiceSelector.swift in Sources */,
+				5FF25715015089968487C66729C4FAE2 /* DFUStarterPeripheral.swift in Sources */,
+				B4EF8F949CDAB22EE5A214D28CFBF57A /* DFUStream.swift in Sources */,
+				E1BA225C938414E160961C29ABE32EAE /* DFUStreamBin.swift in Sources */,
+				9C63F965F87B7BFCABFBFB69A3E4F6F7 /* DFUStreamHex.swift in Sources */,
+				19EEB53F90ECDD62253773F12C6D1295 /* DFUStreamZip.swift in Sources */,
+				1F6E1AD5E8315253C08FCE5F9534D1A3 /* DFUUuidHelper.swift in Sources */,
+				BAEDD649B5205B9DF811276BF542B108 /* DFUVersion.swift in Sources */,
+				D23A4E52DA9CBD8F42E60A982431C23B /* Double.swift in Sources */,
+				20F09120CE1795D101835B66CCB4CC90 /* IntelHex2BinConverter.swift in Sources */,
+				2BD499F8479192CB441244141481F332 /* iOSDFULibrary-dummy.m in Sources */,
+				1F058FFCF08BFE94037D72A2454F64EC /* LegacyDFUExecutor.swift in Sources */,
+				3FC2FDE66E511D6953F5A9E897C6E40B /* LegacyDFUPeripheral.swift in Sources */,
+				29C3F6DD9EBC08826D35C0C5CEFC10DD /* LegacyDFUPeripheralDelegate.swift in Sources */,
+				F4659CFC67B7A3D2C4D830FAC3263271 /* LegacyDFUService.swift in Sources */,
+				A2C69CCB8F1E7AF0D5D1919252355559 /* LegacyDFUServiceInitiator.swift in Sources */,
+				2B50C7517C6A61133DBBE7A95C47141F /* LoggerDelegate.swift in Sources */,
+				91F5304FA925006BCF82D2EA3036774E /* LoggerHelper.swift in Sources */,
+				5E805067273188C25D4BDD1516EB18A4 /* Manifest.swift in Sources */,
+				9C038B950F6B3C07FE9F439508357B5E /* ManifestFirmwareInfo.swift in Sources */,
+				B55714AC3C7166C56F3C9ACA63BD58C0 /* SecureDFUControlPoint.swift in Sources */,
+				E7D5C9B7E1174F58E0BA90A3AD6C189E /* SecureDFUExecutor.swift in Sources */,
+				A38407D94AB472D98E97A4954E5C8558 /* SecureDFUPacket.swift in Sources */,
+				9B5C1DABE5F6F0E74D42583094051923 /* SecureDFUPeripheral.swift in Sources */,
+				CE7E6C32FF8524F96F7DA383FB04DF5C /* SecureDFUPeripheralDelegate.swift in Sources */,
+				2440C4BFAB8248A47623A5655EF24062 /* SecureDFUService.swift in Sources */,
+				B1AA31DC785AB38BF23F9C7512B00DBD /* SecureDFUServiceInitiator.swift in Sources */,
+				4C36F14F66923A51B41B60FB6BBE3E28 /* SoftdeviceBootloaderInfo.swift in Sources */,
+				2BD26C7CE8E43EA2EA79EE8620E43C0D /* ZipArchive.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		001DAD5122EE9A1029605158EAD2FB87 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = IMSLog;
-			target = A2A523E6D90FF53AA039C147829BDA15 /* IMSLog */;
-			targetProxy = 3A7CE5F79D068D246F3FC51282695FEC /* PBXContainerItemProxy */;
-		};
-		04B6E9B898749474CE4FDFA0E51E23EC /* PBXTargetDependency */ = {
+		02134E471A577B126EB2AD5EB6244E09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = iosSinovoLibrary;
 			target = A4836E8A2CE21326895499C8A731D078 /* iosSinovoLibrary */;
-			targetProxy = 1BD2C19F663823A2F635806770ADC154 /* PBXContainerItemProxy */;
+			targetProxy = F4F9819109142D4A2BEFEB34879E7248 /* PBXContainerItemProxy */;
 		};
-		0A81F5F7E99019D17A77E4C54406EC85 /* PBXTargetDependency */ = {
+		14A01DA26C507DB032A9D4F9E26251C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iOSDFULibrary;
+			target = 9506C7FCDAE6E6967A99655F452EEE93 /* iOSDFULibrary */;
+			targetProxy = E81C2D0D9F9555144D8CE3A53D56FB47 /* PBXContainerItemProxy */;
+		};
+		1BE90B0B4AAA80398A3B0DEF81B52975 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IotLinkKit;
 			target = F4FBE466B0DF6B7512E21301739DB3A3 /* IotLinkKit */;
-			targetProxy = 6AD1063DF356F78D12760A0D9C873F40 /* PBXContainerItemProxy */;
+			targetProxy = 7A516B386BA7ACCABBD1C1662CB93B9E /* PBXContainerItemProxy */;
 		};
-		208027CC509B9C82D225C89A1BDEFD83 /* PBXTargetDependency */ = {
+		742EE68BE12104C8457B785585BFD130 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IotLinkKit;
 			target = F4FBE466B0DF6B7512E21301739DB3A3 /* IotLinkKit */;
-			targetProxy = 270D201ACB8810A6ED203E2148736DAF /* PBXContainerItemProxy */;
+			targetProxy = 903356ACBA2A80C5563E8D0DDB0EC29D /* PBXContainerItemProxy */;
 		};
-		9C67C6531E8A23081DB32532C298CE2B /* PBXTargetDependency */ = {
+		8D1CFC9811A30D5BAE1277368DD66A54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IMSLog;
 			target = A2A523E6D90FF53AA039C147829BDA15 /* IMSLog */;
-			targetProxy = 716152AD300350157EB25A0E52562C2D /* PBXContainerItemProxy */;
+			targetProxy = 533B3D7544AF8A765F2FEF68CF1A08C1 /* PBXContainerItemProxy */;
 		};
-		F307241A987A2E817636810DA89B2229 /* PBXTargetDependency */ = {
+		A17528981B99126ED804A9F3A94A2397 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZIPFoundation;
+			target = AA15C8469D67684160CC2A7098EB841C /* ZIPFoundation */;
+			targetProxy = 70FD549226C46D9C35A3CFA1ACB1D68E /* PBXContainerItemProxy */;
+		};
+		B5BED4EEDBD72A42AE5B7FBBE100A5C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-iosSinovoLibrary_Example";
 			target = 0D5EB99D1BBCB85D00FA28289177C538 /* Pods-iosSinovoLibrary_Example */;
-			targetProxy = FD6235DC33E26F252268CB58D1DEAE64 /* PBXContainerItemProxy */;
+			targetProxy = 458EF5337A383860C5013B320FE5AD4A /* PBXContainerItemProxy */;
+		};
+		CC88EFEABED0F84E30BACF1D4D895453 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iOSDFULibrary;
+			target = 9506C7FCDAE6E6967A99655F452EEE93 /* iOSDFULibrary */;
+			targetProxy = E960D29CE8BA945FCFFAFC58BB849C43 /* PBXContainerItemProxy */;
+		};
+		F0788EC8AF49E784A5C353A14F9C7B0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZIPFoundation;
+			target = AA15C8469D67684160CC2A7098EB841C /* ZIPFoundation */;
+			targetProxy = 23E02F62D4B382324F99DF268F8442FF /* PBXContainerItemProxy */;
+		};
+		FE858BB7CCD330066FDA0E606259B7F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IMSLog;
+			target = A2A523E6D90FF53AA039C147829BDA15 /* IMSLog */;
+			targetProxy = 9C0894B5D1F6A45188D2DE99BE57C65F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		096D26FEED14099CE6E96E6D1731C003 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 362D823606EE3B360EE1AF19A0698A80 /* iosSinovoLibrary.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iosSinovoLibrary/iosSinovoLibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iosSinovoLibrary/iosSinovoLibrary-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/iosSinovoLibrary/iosSinovoLibrary.modulemap";
+				PRODUCT_MODULE_NAME = iosSinovoLibrary;
+				PRODUCT_NAME = iosSinovoLibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -643,9 +1127,39 @@
 			};
 			name = Debug;
 		};
-		43B266279B4DE7B648A6F1DB627CA9F4 /* Release */ = {
+		2BC4BC44D9B1DA72F0B5F42811D6A5A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9B94DCADDD175C276AEC8AC7E906FE3 /* Pods-iosSinovoLibrary_Example.release.xcconfig */;
+			baseConfigurationReference = 2EBBE89DE8CB2FF18BCD13CA3F8D42AD /* ZIPFoundation.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZIPFoundation/ZIPFoundation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZIPFoundation/ZIPFoundation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ZIPFoundation/ZIPFoundation.modulemap";
+				PRODUCT_MODULE_NAME = ZIPFoundation;
+				PRODUCT_NAME = ZIPFoundation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3D37FCCBF0A8C64707EBC3BF3ECF3D65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34D43293BB7DC3F2F22ECED07C91DAF0 /* Pods-iosSinovoLibrary_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -678,7 +1192,7 @@
 		};
 		4B78AA6B8DB064D8C56C7DE72392BE68 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DED53557ACED65B9A610DD77D9882F6C /* IotLinkKit.debug.xcconfig */;
+			baseConfigurationReference = 54205983F2312F01999B255B06B52382 /* IotLinkKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -689,9 +1203,40 @@
 			};
 			name = Debug;
 		};
+		5946E67FD6685F08F2411C1C7E3EA67B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 927D1572431243D9712C35E0BDC13547 /* ZIPFoundation.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZIPFoundation/ZIPFoundation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZIPFoundation/ZIPFoundation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ZIPFoundation/ZIPFoundation.modulemap";
+				PRODUCT_MODULE_NAME = ZIPFoundation;
+				PRODUCT_NAME = ZIPFoundation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		68D1AAA0CE6A89546EFBC367A25DC9C6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 702D1DC96D1C5361E16DC570E143A9BC /* IotLinkKit.release.xcconfig */;
+			baseConfigurationReference = 4EABFE8870FCB5EE6AF078CE40BBE2BA /* IotLinkKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -705,7 +1250,7 @@
 		};
 		7257BA14A1C6149C1B8493677D785DD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AABA7C59045789FCB4EFFB0706760A9F /* Pods-iosSinovoLibrary_Tests.debug.xcconfig */;
+			baseConfigurationReference = 0AF177CA6036295E0E713ED840E9CA48 /* Pods-iosSinovoLibrary_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -737,7 +1282,7 @@
 		};
 		7ED0B903B44A19231386440C963F6825 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C25B18EF4ED13C45A2A2093F6B49483 /* IMSLog.release.xcconfig */;
+			baseConfigurationReference = A0AD8526C6ADD4CB0934EE472345945E /* IMSLog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -749,9 +1294,41 @@
 			};
 			name = Release;
 		};
+		A19AF9CB3DD0FFF170361500A7760763 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D64A3DA6600D8EACC6312805B08FE866 /* Pods-iosSinovoLibrary_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iosSinovoLibrary_Example/Pods-iosSinovoLibrary_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iosSinovoLibrary_Example/Pods-iosSinovoLibrary_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		B1B36EC98C820FE61FFEA2E3E3EAC8B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C1F50286BFC378670E48B714FFA40E9 /* IMSLog.debug.xcconfig */;
+			baseConfigurationReference = C5FD8BD5937F472BBAF8C3BC86F22A64 /* IMSLog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -759,6 +1336,36 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C93F832DFDF9EE8C3851AD2041E46863 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7665993BF8D21C08DFA39B95220FCCBC /* iOSDFULibrary.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iOSDFULibrary/iOSDFULibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOSDFULibrary/iOSDFULibrary-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iOSDFULibrary/iOSDFULibrary.modulemap";
+				PRODUCT_MODULE_NAME = iOSDFULibrary;
+				PRODUCT_NAME = iOSDFULibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.4;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -817,77 +1424,14 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		E9E49446EE5BB1B207ECCE80A5FE3778 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 362D823606EE3B360EE1AF19A0698A80 /* iosSinovoLibrary.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/iosSinovoLibrary/iosSinovoLibrary-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/iosSinovoLibrary/iosSinovoLibrary-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/iosSinovoLibrary/iosSinovoLibrary.modulemap";
-				PRODUCT_MODULE_NAME = iosSinovoLibrary;
-				PRODUCT_NAME = iosSinovoLibrary;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		F70D7AFA7DD4A1EAE52F78A5D0EF8D78 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A28143E046A2CD88B3D920FEBEA4CE4 /* Pods-iosSinovoLibrary_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-iosSinovoLibrary_Example/Pods-iosSinovoLibrary_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-iosSinovoLibrary_Example/Pods-iosSinovoLibrary_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FABBF91D07205045A11715325039FEFE /* Debug */ = {
+		DFEF268C91FC839F3D8E0F152874DD45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4BCC482DE3780CC2B22136BAEB065F66 /* iosSinovoLibrary.debug.xcconfig */;
 			buildSettings = {
@@ -918,9 +1462,40 @@
 			};
 			name = Debug;
 		};
+		EAB0E9B2D31FA9DAF4893FB9592BABE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9617ED54AF49E501D977424725EE1DD /* iOSDFULibrary.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iOSDFULibrary/iOSDFULibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOSDFULibrary/iOSDFULibrary-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iOSDFULibrary/iOSDFULibrary.modulemap";
+				PRODUCT_MODULE_NAME = iOSDFULibrary;
+				PRODUCT_NAME = iOSDFULibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.4;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		FC1B6830D2E3E431C3681A9C6AA68DF5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41DFFFA350014B4F03EEB48E52C16251 /* Pods-iosSinovoLibrary_Tests.release.xcconfig */;
+			baseConfigurationReference = 3A5104C5652D584087FD6E06392BBC38 /* Pods-iosSinovoLibrary_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -954,15 +1529,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0E9100961DFD70296228F65A4C4DC071 /* Build configuration list for PBXNativeTarget "iosSinovoLibrary" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FABBF91D07205045A11715325039FEFE /* Debug */,
-				E9E49446EE5BB1B207ECCE80A5FE3778 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		176836D94A34801FF257515CF1A8E5BC /* Build configuration list for PBXAggregateTarget "IMSLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -981,15 +1547,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50E72F50E17FD2E26EB7EDFBD3EAD2C0 /* Build configuration list for PBXNativeTarget "Pods-iosSinovoLibrary_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F70D7AFA7DD4A1EAE52F78A5D0EF8D78 /* Debug */,
-				43B266279B4DE7B648A6F1DB627CA9F4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		6B922C051F120C36FDF3FA77D5CB0B2B /* Build configuration list for PBXAggregateTarget "IotLinkKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -999,11 +1556,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		6CED6563826E9632E106906A6AF85717 /* Build configuration list for PBXNativeTarget "iOSDFULibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C93F832DFDF9EE8C3851AD2041E46863 /* Debug */,
+				EAB0E9B2D31FA9DAF4893FB9592BABE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		811C97489C0507142F44EC0D657236E7 /* Build configuration list for PBXNativeTarget "iosSinovoLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFEF268C91FC839F3D8E0F152874DD45 /* Debug */,
+				096D26FEED14099CE6E96E6D1731C003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		822C1B77053F68B8CA3A5A489A9D8E4A /* Build configuration list for PBXNativeTarget "Pods-iosSinovoLibrary_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7257BA14A1C6149C1B8493677D785DD2 /* Debug */,
 				FC1B6830D2E3E431C3681A9C6AA68DF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AD3E0E4E5E198F593C900C52CB91496 /* Build configuration list for PBXNativeTarget "Pods-iosSinovoLibrary_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A19AF9CB3DD0FFF170361500A7760763 /* Debug */,
+				3D37FCCBF0A8C64707EBC3BF3ECF3D65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AADE132E33070DFA47CD5D0C857E862E /* Build configuration list for PBXNativeTarget "ZIPFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BC4BC44D9B1DA72F0B5F42811D6A5A3 /* Debug */,
+				5946E67FD6685F08F2411C1C7E3EA67B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
