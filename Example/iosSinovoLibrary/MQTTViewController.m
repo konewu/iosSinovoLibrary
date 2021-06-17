@@ -9,6 +9,7 @@
 #import "mqttCallBack.h"
 #import "MQTTViewController.h"
 #import "httpCallback.h"
+#import "SYIToast+SYCategory.h"
 #import <iosSinovoLib/iosSinovoLib.h>
 
 @interface MQTTViewController ()
@@ -190,7 +191,7 @@ UITextField *gatewayIDTF;
     myDelegate.isMqttLoginOk = NO;
     [self hideKey];
     NSString *account = accountTF.text;
-    NSString *pass   = passTF.text;
+    NSString *pass    = passTF.text;
     
     if (![account isEqualToString:@""] && ![pass isEqualToString:@""]) {
         [[httpCallback sharedHttpCallback] userLogin:account :pass];
@@ -204,11 +205,17 @@ UITextField *gatewayIDTF;
     NSString *sno       = locksnoTF.text;
     NSString *gatewayid    = gatewayIDTF.text;
     
-    mac = @"FC510BC5DD51";
-    sno = @"958d5c";
-    gatewayid = @"3C61052AD7FC";
+//    mac = @"FC510BC5DD51";
+//    sno = @"958d5c";
+//    gatewayid = @"3C61052AD7FC";
     
     mac = [mac stringByReplacingOccurrencesOfString:@":" withString:@""];
+    
+    if (mac.length != 12 || sno.length != 6 || gatewayid.length != 12) {
+        NSString *message = @"Incorrect input parameters";
+        [SYIToast alertWithTitle:message];
+        return;
+    }
     
     //check battery via mqtt
     if (myDelegate.isMqttLoginOk) {

@@ -10,6 +10,7 @@
 #import "mqttCallBack.h"
 #import "IOAppDelegate.h"
 #import "ViewController.h"
+#import "SYIToast+SYCategory.h"
 #import <iosSinovoLib/iosSinovoLib.h>
 
 @interface httpCallback ()<HttpDelegate>
@@ -184,34 +185,28 @@ NSString *app_subscribe_topic;
 - (void) getDfuInfo {
     [HttpLib sharedHttpLib].delegate = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSString *url_ver = @"https://gws.qiksmart.com/dfu_debug/dfu.json";
-        [[HttpLib sharedHttpLib] httpGetDFUInfo:url_ver];
+        [[HttpLib sharedHttpLib] httpGetDFUInfo:NO];
     });
 }
 
 - (void) getLockTypeInfo {
     [HttpLib sharedHttpLib].delegate = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        //查询此用户下的网关、锁列表
-        NSString *url_ver = @"https://gws.qiksmart.com/locktype/locktype.json";
-        [[HttpLib sharedHttpLib] httpGetLockType :url_ver];
+        [[HttpLib sharedHttpLib] httpGetLockType];
     });
 }
 
 - (void) getLockTypeImage :(NSString *)url :(NSString *)lockType {
     [HttpLib sharedHttpLib].delegate = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        //查询此用户下的网关、锁列表
-        NSString *url_ver = [NSString stringWithFormat:@"%@%@", @"https://gws.qiksmart.com/locktype/", url];
-        [[HttpLib sharedHttpLib] httpGetLockImage:url_ver :lockType];
+        [[HttpLib sharedHttpLib] httpGetLockImage:url :lockType];
     });
 }
 
 - (void) downloadDfuFile :(NSString *)filename {
     [HttpLib sharedHttpLib].delegate = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSString *url_ver = [NSString stringWithFormat:@"%@%@",@"https://gws.qiksmart.com/dfu_debug/", filename];
-        [[HttpLib sharedHttpLib] downloadDfuFile :url_ver];
+        [[HttpLib sharedHttpLib] downloadDfuFile :NO :filename];
     });
 }
 
@@ -338,20 +333,76 @@ NSString *app_subscribe_topic;
 - (void)onHttpGetDfuVerion:(nonnull id)object {
     if ([object objectForKey:@"dfu_list"]) {
         NSLog(@"DFU info %@", object);
+        
+        dispatch_queue_t mainQueue = dispatch_get_main_queue();
+        dispatch_async(mainQueue, ^{
+            NSString *result_old = myDelegate.resultTV.text;
+            myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\nhttp get dfu info: %@", result_old, object];
+            [myDelegate.resultTV scrollRangeToVisible:NSMakeRange(myDelegate.resultTV.text.length, 1)];
+        });
+     
+        NSArray *dfulist = [object objectForKey:@"dfu_list"];
+        for (NSDictionary *turnDic in dfulist) {
+            NSString *dfu_file  = [turnDic valueForKey:@"dfu_file"];
+            NSString *fmversion = [turnDic valueForKey:@"fmversion"];
+            NSString *lockType  = [turnDic valueForKey:@"lockType"];
+            
+            if ([myDelegate.locktype isEqualToString:lockType]) {
+                NSArray *array1 = [myDelegate.firmwareVersion componentsSeparatedByString:@"."];
+                NSArray *array2 = [fmversion componentsSeparatedByString:@"."];
+                if (array1.count != 3 || array2.count != 3) {
+                    NSLog(@"error, firmware is error");
+                    return;
+                }
+                int oldver = [array1[2] intValue];
+                int newver = [array2[2] intValue];
+                
+                if (newver > oldver) {
+                    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+                    dispatch_async(mainQueue, ^{
+                        NSString *result_old = myDelegate.resultTV.text;
+                        myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\nDownload DFU file now....", result_old];
+                        [myDelegate.resultTV scrollRangeToVisible:NSMakeRange(myDelegate.resultTV.text.length, 1)];
+                    });
+                    [self downloadDfuFile :dfu_file];
+                }else {
+                    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+                    dispatch_async(mainQueue, ^{
+                        NSString *result_old = myDelegate.resultTV.text;
+                        myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\nFirmware is the latest version, no need to update", result_old];
+                        [myDelegate.resultTV scrollRangeToVisible:NSMakeRange(myDelegate.resultTV.text.length, 1)];
+                    });
+                    NSLog(@"Firmware is the latest version");
+                }
+            }
+        }
     }
 }
 
 - (void)onHttpGetLockType:(nonnull id)object {
     if ([object objectForKey:@"lockTypeList"]) {
         NSLog(@"Download Lock Info: %@", object);
+        NSArray *lockTypeList = [object objectForKey:@"lockTypeList"];
+        for (NSDictionary *turnDic in lockTypeList) {
+            NSString *locktype   = [turnDic valueForKey:@"locktype"];
+            [myDelegate.lockTypeArray addObject:locktype];
+        }
     }
 }
 
 - (void)onDownloadDfuFile:(nonnull NSString *)filepath {
     NSLog(@"DFU file：%@", filepath);
+    myDelegate.dfuFilePath = filepath;
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    dispatch_async(mainQueue, ^{
+        NSString *result_old = myDelegate.resultTV.text;
+        myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\nDownload the upgrade package successfully，file：%@", result_old, filepath];
+        
+        [myDelegate.resultTV scrollRangeToVisible:NSMakeRange(myDelegate.resultTV.text.length, 1)];
+        NSString *message = @"Download the upgrade package successfully";
+        [SYIToast alertWithTitle:message];
+    });
 }
-
-
 
 //Nsstring parse to NSDictionary
 - (NSDictionary *)StringToDictionary:(NSString *)jsonString {

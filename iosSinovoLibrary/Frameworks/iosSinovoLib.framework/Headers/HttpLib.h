@@ -73,11 +73,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) resetLock :(NSString *)lockID;
 
 - (void) httpGetUserAvatar :(NSString *)url ;
-- (void) httpGetLockType :(NSString *)url ;
-- (void) httpGetDFUInfo :(NSString *)url ;
+- (void) httpGetLockType ;
+- (void) httpGetDFUInfo :(BOOL)isRelease ;  
 - (void) httpGetLockImage :(NSString *)url :(NSString *)lockType;
 
-- (void) downloadDfuFile :(NSString *)url ;
+- (void) downloadDfuFile :(BOOL)isRelease :(NSString *)url ;
 @end
 
 NS_ASSUME_NONNULL_END

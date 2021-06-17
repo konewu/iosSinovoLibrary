@@ -8,7 +8,9 @@
 #import "HomeViewController.h"
 #import "ViewController.h"
 #import "GWViewController.h"
+#import "httpCallback.h"
 #import "MQTTViewController.h"
+#import "IODFUViewController.h"
 
 @interface HomeViewController ()
 
@@ -58,6 +60,20 @@
     [gotomqtt addTarget:self action:@selector(gotomqtt) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview :gotomqtt];
+    
+    
+    float btn4Y = btn3Y + btn1H + 30;
+    UIButton *gotodfu = [[UIButton alloc] initWithFrame:CGRectMake(btn1X, btn4Y, btn1W, btn1H)];
+    [gotodfu setTitle:@"DFU" forState:UIControlStateNormal];
+    [gotodfu setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    gotodfu.backgroundColor = SkyBlueColor;
+    gotodfu.userInteractionEnabled = YES;
+    [gotodfu addTarget:self action:@selector(gotodfu) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview :gotodfu];
+    
+    //下载设备的型号
+    [[httpCallback sharedHttpCallback] getLockTypeInfo];
 }
 
 -(void) gotogw {
@@ -81,6 +97,15 @@
 
 -(void) gotomqtt {
     UIViewController *viewController = [[MQTTViewController alloc] init];
+    UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
+    temporaryBarButtonItem.title = @" ";
+    self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
+    viewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+-(void) gotodfu {
+    UIViewController *viewController = [[IODFUViewController alloc] init];
     UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
     temporaryBarButtonItem.title = @" ";
     self.navigationItem.backBarButtonItem = temporaryBarButtonItem;

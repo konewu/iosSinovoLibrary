@@ -32,6 +32,10 @@
 		BE4140A326784CFB0020EA0B /* mqttCallBack.m in Sources */ = {isa = PBXBuildFile; fileRef = BE41409B26784CFA0020EA0B /* mqttCallBack.m */; };
 		BE4140A426784CFB0020EA0B /* SinovoBleCallBack.m in Sources */ = {isa = PBXBuildFile; fileRef = BE41409E26784CFB0020EA0B /* SinovoBleCallBack.m */; };
 		BE4140A526784CFB0020EA0B /* httpCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4140A126784CFB0020EA0B /* httpCallback.m */; };
+		BE44E006267AF4C9004A8155 /* SYIToast.m in Sources */ = {isa = PBXBuildFile; fileRef = BE44E003267AF4C9004A8155 /* SYIToast.m */; };
+		BE44E007267AF4C9004A8155 /* SYIToast+SYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = BE44E005267AF4C9004A8155 /* SYIToast+SYCategory.m */; };
+		BE44E00A267AFB70004A8155 /* IODFUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE44E009267AFB70004A8155 /* IODFUViewController.m */; };
+		BE44E011267B3507004A8155 /* swiftFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE44E010267B3507004A8155 /* swiftFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +95,14 @@
 		BE4140A026784CFB0020EA0B /* mqttCallBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mqttCallBack.h; sourceTree = "<group>"; };
 		BE4140A126784CFB0020EA0B /* httpCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = httpCallback.m; sourceTree = "<group>"; };
 		BE4140A6267875100020EA0B /* iosSinovoLibrary_Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iosSinovoLibrary_Example.entitlements; sourceTree = "<group>"; };
+		BE44E002267AF4C9004A8155 /* SYIToast+SYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SYIToast+SYCategory.h"; sourceTree = "<group>"; };
+		BE44E003267AF4C9004A8155 /* SYIToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYIToast.m; sourceTree = "<group>"; };
+		BE44E004267AF4C9004A8155 /* SYIToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYIToast.h; sourceTree = "<group>"; };
+		BE44E005267AF4C9004A8155 /* SYIToast+SYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SYIToast+SYCategory.m"; sourceTree = "<group>"; };
+		BE44E008267AFB70004A8155 /* IODFUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IODFUViewController.h; sourceTree = "<group>"; };
+		BE44E009267AFB70004A8155 /* IODFUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IODFUViewController.m; sourceTree = "<group>"; };
+		BE44E00F267B3507004A8155 /* iosSinovoLibrary_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iosSinovoLibrary_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		BE44E010267B3507004A8155 /* swiftFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftFile.swift; sourceTree = "<group>"; };
 		FAA177AB2ECD4168A19622DC /* iosSinovoLibrary.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = iosSinovoLibrary.podspec; path = ../iosSinovoLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
@@ -134,6 +146,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				BE44E010267B3507004A8155 /* swiftFile.swift */,
 				BE4140A6267875100020EA0B /* iosSinovoLibrary_Example.entitlements */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for iosSinovoLibrary */,
@@ -141,6 +154,7 @@
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				10775A0F1A349CA88E7891D9 /* Pods */,
+				BE44E00F267B3507004A8155 /* iosSinovoLibrary_Example-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,6 +241,7 @@
 		BE41408C26784C5C0020EA0B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BE44E001267AF4B8004A8155 /* Toast */,
 				BE41408F26784CC60020EA0B /* GWViewController.h */,
 				BE41408E26784CC60020EA0B /* GWViewController.m */,
 				BE41409526784CC70020EA0B /* HomeViewController.h */,
@@ -235,6 +250,8 @@
 				BE41409226784CC70020EA0B /* MQTTViewController.m */,
 				BE41409126784CC60020EA0B /* ViewController.h */,
 				BE41409326784CC70020EA0B /* ViewController.m */,
+				BE44E008267AFB70004A8155 /* IODFUViewController.h */,
+				BE44E009267AFB70004A8155 /* IODFUViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -252,6 +269,17 @@
 				BE41409E26784CFB0020EA0B /* SinovoBleCallBack.m */,
 			);
 			name = Delegate;
+			sourceTree = "<group>";
+		};
+		BE44E001267AF4B8004A8155 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				BE44E004267AF4C9004A8155 /* SYIToast.h */,
+				BE44E003267AF4C9004A8155 /* SYIToast.m */,
+				BE44E002267AF4C9004A8155 /* SYIToast+SYCategory.h */,
+				BE44E005267AF4C9004A8155 /* SYIToast+SYCategory.m */,
+			);
+			name = Toast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +336,7 @@
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
 						DevelopmentTeam = 8923RQ2X36;
+						LastSwiftMigration = 1250;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -446,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE44E00A267AFB70004A8155 /* IODFUViewController.m in Sources */,
 				BE41409826784CC70020EA0B /* ViewController.m in Sources */,
 				6003F59E195388D20070C39A /* IOAppDelegate.m in Sources */,
 				BE4140A426784CFB0020EA0B /* SinovoBleCallBack.m in Sources */,
@@ -453,8 +483,11 @@
 				6003F5A7195388D20070C39A /* IOViewController.m in Sources */,
 				BE4140A326784CFB0020EA0B /* mqttCallBack.m in Sources */,
 				BE41409726784CC70020EA0B /* MQTTViewController.m in Sources */,
+				BE44E011267B3507004A8155 /* swiftFile.swift in Sources */,
 				BE41409626784CC70020EA0B /* GWViewController.m in Sources */,
+				BE44E007267AF4C9004A8155 /* SYIToast+SYCategory.m in Sources */,
 				BE41409926784CC70020EA0B /* HomeViewController.m in Sources */,
+				BE44E006267AF4C9004A8155 /* SYIToast.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				BE4140A226784CFB0020EA0B /* BusinessData.m in Sources */,
 			);
@@ -584,6 +617,7 @@
 			baseConfigurationReference = 15C14F1DFCAD2EEE5952BDBB /* Pods-iosSinovoLibrary_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = iosSinovoLibrary_Example.entitlements;
 				DEVELOPMENT_TEAM = 8923RQ2X36;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -593,9 +627,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iosSinovoLibrary/iosSinovoLibrary-Prefix.pch";
 				INFOPLIST_FILE = "iosSinovoLibrary/iosSinovoLibrary-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.iosSinovoLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iosSinovoLibrary_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -606,6 +643,7 @@
 			baseConfigurationReference = 22EB38EEC9EC355A6C6A8B19 /* Pods-iosSinovoLibrary_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = iosSinovoLibrary_Example.entitlements;
 				DEVELOPMENT_TEAM = 8923RQ2X36;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -615,9 +653,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iosSinovoLibrary/iosSinovoLibrary-Prefix.pch";
 				INFOPLIST_FILE = "iosSinovoLibrary/iosSinovoLibrary-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.iosSinovoLibrary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iosSinovoLibrary_Example-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -627,6 +667,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2825D83D9A61BF8B0423CAA1 /* Pods-iosSinovoLibrary_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -652,6 +693,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E3D4C863A83503D90A40FEE /* Pods-iosSinovoLibrary_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",

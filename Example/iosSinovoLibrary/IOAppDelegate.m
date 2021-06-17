@@ -16,6 +16,16 @@ IOAppDelegate *myDelegate;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     myDelegate = (IOAppDelegate*)[[UIApplication sharedApplication] delegate];
+    myDelegate.lockTypeArray        = [[NSMutableArray alloc] init];
+    
+    myDelegate.bleConnected = NO;
+    myDelegate.isDFUMode = NO;
+    myDelegate.bleIsOn = NO;
+    myDelegate.dfuFilePath = @"";
+    myDelegate.firmwareVersion = @"";
+    myDelegate.isMqttLoginOk = NO;
+    myDelegate.locktype = @"";
+    myDelegate.lockSno = @"";
     
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:[HomeViewController new]];
     self.window.rootViewController = navigationController;

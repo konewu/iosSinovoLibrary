@@ -10,8 +10,9 @@
 #import "SinovoBleCallBack.h"
 #import "BusinessData.h"
 #import <iosSinovoLib/iosSinovoLib.h>
+#import "iosSinovoLibrary_Example-Bridging-Header.h"
 
-@interface SinovoBleCallBack ()<BleDelegate>
+@interface SinovoBleCallBack ()<BleDelegate,DFUProgressDelegate,DFUServiceDelegate,LoggerDelegate>
 
 @end
 
@@ -40,6 +41,18 @@ extern IOAppDelegate *myDelegate;
 //蓝牙扫描的回调
 - (void)onLockFound:(nonnull BleLock *)bleDevice {
     NSLog(@"回调通知，蓝牙扫描的结果回调，qrcode：%@， name：%@, uuid:%@", bleDevice.qrCode, bleDevice.deviceName, bleDevice.uuid);
+    
+    if (myDelegate.isDFUMode) {
+        NSFileManager *fileManager = [[NSFileManager alloc] init];
+        if ([fileManager fileExistsAtPath:myDelegate.dfuFilePath]) {
+            if ([bleDevice.deviceName isEqualToString:@"lockDFU"]) {
+                [self uploadFileToBlueDevice :[NSURL fileURLWithPath:myDelegate.dfuFilePath] :bleDevice.mPeripheral];
+                return;
+            }
+        }else {
+            NSLog(@"DFU file does not exist：%@",myDelegate.dfuFilePath);
+        }
+    }
 }
 
 /**
@@ -47,77 +60,93 @@ extern IOAppDelegate *myDelegate;
  */
 - (void)uploadFileToBlueDevice:(NSURL *)filePath :(CBPeripheral *)peripheral{
 
-    NSLog(@"开始向锁端上传 dfu升级文件 %@", filePath);
-    //create a DFUFirmware object using a NSURL to a Distribution Packer(ZIP)
-//    DFUFirmware *selectedFirmware = [[DFUFirmware alloc] initWithUrlToZipFile:filePath];// or
-//    //Use the DFUServiceInitializer to initialize the DFU process.
-//
-////    [[DFUServiceInitiator alloc] initWithQueue:self delegateQueue:self progressQueue:self loggerQueue:self];
-//
-//    DFUServiceInitiator *initiator = [[DFUServiceInitiator alloc] initWithCentralManager: [SinovoBle sharedBLE].mCentral target:peripheral];
-//
-//    [initiator withFirmware :selectedFirmware];
-//    // Optional:
-//    // initiator.forceDfu = YES/NO; // default NO
-//    // initiator.packetReceiptNotificationParameter = N; // default is 12
-//    initiator.logger = self; // - to get log info
-//    initiator.delegate = self; // - to be informed about current state and errors
-//    initiator.progressDelegate = self; // - to show progress bar
-//    // initiator.peripheralSelector = ... // the default selector is used
-//
-//   // DFUServiceController *controller = [initiator start];
-//
-//    DFUServiceController *controller = [initiator startWithTarget:peripheral];
+    NSLog(@"upload file to lock %@", filePath);
+//    create a DFUFirmware object using a NSURL to a Distribution Packer(ZIP)
+    DFUFirmware *selectedFirmware = [[DFUFirmware alloc] initWithUrlToZipFile:filePath];// or
+    //Use the DFUServiceInitializer to initialize the DFU process.
+
+
+    DFUServiceInitiator *initiator = [[DFUServiceInitiator alloc] initWithCentralManager: [SinovoBle sharedBLE].mCentral target:peripheral];
+
+    [initiator withFirmware :selectedFirmware];
+    // Optional:
+    // initiator.forceDfu = YES/NO; // default NO
+    // initiator.packetReceiptNotificationParameter = N; // default is 12
+    initiator.logger = self; // - to get log info
+    initiator.delegate = self; // - to be informed about current state and errors
+    initiator.progressDelegate = self; // - to show progress bar
+    // initiator.peripheralSelector = ... // the default selector is used
+
+   // DFUServiceController *controller = [initiator start];
+
+    DFUServiceController *controller = [initiator startWithTarget:peripheral];
     
 }
 
 #pragma mark - LoggerDelegate
-//- (void)logWith:(enum LogLevel)level message:(NSString *)message{
-//    NSLog(@"logWith---------level = %ld,-------message,%@",(long)level,message);
-//}
+- (void)logWith:(enum LogLevel)level message:(NSString *)message{
+    NSLog(@"logWith---------level = %ld,-------message,%@",(long)level,message);
+}
 #pragma mark - DFUServiceDelegate
 
 
 #pragma mark - DFUProgressDelegate
 
-//- (void)dfuProgressDidChangeFor:(NSInteger)part outOf:(NSInteger)totalParts to:(NSInteger)progress currentSpeedBytesPerSecond:(double)currentSpeedBytesPerSecond avgSpeedBytesPerSecond:(double)avgSpeedBytesPerSecond{
-//
-//    NSLog(@"升级中...%zd %%",progress);
-//    myDelegate.progressView.progress = progress * 0.01;
-//    myDelegate.progressLabel.text = [NSString stringWithFormat:@"Upgrading：%zd %%",progress];
-//}
+- (void)dfuProgressDidChangeFor:(NSInteger)part outOf:(NSInteger)totalParts to:(NSInteger)progress currentSpeedBytesPerSecond:(double)currentSpeedBytesPerSecond avgSpeedBytesPerSecond:(double)avgSpeedBytesPerSecond{
 
-//- (void)dfuStateDidChangeTo:(enum DFUState)state{
-//    NSLog(@"dfuStateDidChangeTo-----------state = %ld",(long)state);
-//    if (state == 0) {
-//        myDelegate.progressLabel.text = [NSString stringWithFormat:@"Connecting lock"];
-//    }if (state == 1) {
-//        myDelegate.progressLabel.text = [NSString stringWithFormat:@"Start to uploading"];
-//    }
-//    if (state == 6) {
-//        myDelegate.progressLabel.text = [NSString stringWithFormat:@"Firmware upgrade completed"];
-//        [myDelegate.progressBtn setTitle:@"OK" forState:UIControlStateNormal];
-//        [myDelegate.progressBtn setTitleColor:ThemeColor forState:UIControlStateNormal];
-//        [myDelegate.progressBtn setEnabled:YES];
-//        //需要通知 库，dfu 升级完成了
-//        [[SinovoBle sharedBLE] finishiDFU];
-//        myDelegate.isDFUMode = NO;
-//    }
-//}
+    NSLog(@"Upgrading...%zd %%",progress);
+    
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    dispatch_async(mainQueue, ^{
+        NSString *result_old = myDelegate.resultTV.text;
+        myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\nUpgrading: %zd %%", result_old, progress];
+        [myDelegate.resultTV scrollRangeToVisible:NSMakeRange(myDelegate.resultTV.text.length, 1)];
+    });
+}
 
-//- (void)dfuError:(enum DFUError)error didOccurWithMessage:(NSString *)message{
-//    NSLog(@"dfuError-----------error = %ld,-------------message = %@",(long)error,message);
-//
-//    myDelegate.progressLabel.text = [NSString stringWithFormat:@"Upgrade failed,please try again in 2 minutes"];
-//    myDelegate.progressLabel.textColor = [UIColor redColor];
-//    [myDelegate.progressBtn setTitle:@"OK" forState:UIControlStateNormal];
-//    [myDelegate.progressBtn setTitleColor:ThemeColor forState:UIControlStateNormal];
-//    [myDelegate.progressBtn setEnabled:YES];
-//
-//    //需要通知 库，dfu 升级完成了
-//    [[SinovoBle sharedBLE] finishiDFU];
-//    myDelegate.isDFUMode = NO;
-//}
+- (void)dfuStateDidChangeTo:(enum DFUState)state{
+    NSLog(@"dfuStateDidChangeTo-----------state = %ld",(long)state);
+    if (state == 0) {
+        dispatch_queue_t mainQueue = dispatch_get_main_queue();
+        dispatch_async(mainQueue, ^{
+            NSString *result_old = myDelegate.resultTV.text;
+            myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\nConnecting lock", result_old];
+            [myDelegate.resultTV scrollRangeToVisible:NSMakeRange(myDelegate.resultTV.text.length, 1)];
+        });
+    }if (state == 1) {
+        dispatch_queue_t mainQueue = dispatch_get_main_queue();
+        dispatch_async(mainQueue, ^{
+            NSString *result_old = myDelegate.resultTV.text;
+            myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\nStart to uploading", result_old];
+            [myDelegate.resultTV scrollRangeToVisible:NSMakeRange(myDelegate.resultTV.text.length, 1)];
+        });
+    }
+    if (state == 6) {
+        dispatch_queue_t mainQueue = dispatch_get_main_queue();
+        dispatch_async(mainQueue, ^{
+            NSString *result_old = myDelegate.resultTV.text;
+            myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\nFirmware update finish", result_old];
+            [myDelegate.resultTV scrollRangeToVisible:NSMakeRange(myDelegate.resultTV.text.length, 1)];
+        });
+        //需要通知 库，dfu 升级完成了
+        [[SinovoBle sharedBLE] finishiDFU];
+
+    }
+}
+
+- (void)dfuError:(enum DFUError)error didOccurWithMessage:(NSString *)message{
+    NSLog(@"dfuError-----------error = %ld,-------------message = %@",(long)error,message);
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+    dispatch_async(mainQueue, ^{
+        NSString *result_old = myDelegate.resultTV.text;
+        myDelegate.resultTV.text = [NSString stringWithFormat:@"%@\n\nUpgrade failed,please try again", result_old];
+        
+        [myDelegate.resultTV scrollRangeToVisible:NSMakeRange(myDelegate.resultTV.text.length, 1)];
+    });
+
+    //需要通知 库，dfu 升级完成了
+    [[SinovoBle sharedBLE] finishiDFU];
+}
 
 
 
@@ -126,38 +155,55 @@ extern IOAppDelegate *myDelegate;
     NSLog(@"回调通知，手机关闭了蓝牙");
     myDelegate.bluestatusLb.text = @"OFF";
     myDelegate.bluestatusLb.textColor = [UIColor darkTextColor];
+    myDelegate.bluestatusLb_dfu.text = @"OFF";
+    myDelegate.bluestatusLb_dfu.textColor = [UIColor darkTextColor];
     
+    myDelegate.bleConnected = NO;
     myDelegate.blestatusLb.text = @"disconnected";
     myDelegate.blestatusLb.textColor = [UIColor darkTextColor];
+    myDelegate.blestatusLb_dfu.text = @"disconnected";
+    myDelegate.blestatusLb_dfu.textColor = [UIColor darkTextColor];
 }
 
 //手机蓝牙打开
 - (void)onBluetoothOn {
     NSLog(@"回调通知，手机开启了蓝牙");
+    myDelegate.bleIsOn = YES;
     myDelegate.bluestatusLb.text = @"ON";
     myDelegate.bluestatusLb.textColor = [UIColor blueColor];
+    myDelegate.bluestatusLb_dfu.text = @"ON";
+    myDelegate.bluestatusLb_dfu.textColor = [UIColor blueColor];
 }
 
 //手机蓝牙状态未知
 - (void)onBleStatusUnknown {
     NSLog(@"回调通知，手机蓝牙的状态 未知");
+    myDelegate.bleIsOn = NO;
     myDelegate.bluestatusLb.text = @"OFF";
     myDelegate.bluestatusLb.textColor = [UIColor darkTextColor];
+    myDelegate.bluestatusLb_dfu.text = @"OFF";
+    myDelegate.bluestatusLb_dfu.textColor = [UIColor darkTextColor];
 }
 
 //蓝牙连接断开的回调
 - (void)onBleDisconnect:(nonnull CBPeripheral *)peripheral {
     NSLog(@"回调通知，蓝牙连接断开");
-    
+    myDelegate.bleConnected = NO;
     myDelegate.blestatusLb.text = @"disconnected";
     myDelegate.blestatusLb.textColor = [UIColor darkTextColor];
+    myDelegate.blestatusLb_dfu.text = @"disconnected";
+    myDelegate.blestatusLb_dfu.textColor = [UIColor darkTextColor];
 }
 
 //蓝牙连接失败
 - (void)onConnectFailure {
     NSLog(@"回调通知，蓝牙连接失败");
+    
+    myDelegate.bleConnected = NO;
     myDelegate.blestatusLb.text = @"disconnected";
     myDelegate.blestatusLb.textColor = [UIColor darkTextColor];
+    myDelegate.blestatusLb_dfu.text = @"disconnected";
+    myDelegate.blestatusLb_dfu.textColor = [UIColor darkTextColor];
 }
 
 //蓝牙扫描完成, 10秒 扫描完成
@@ -174,8 +220,11 @@ extern IOAppDelegate *myDelegate;
 //通过二维码来连接锁超时 ，超时间为 1分钟
 - (void) onConnectLockViaQRCodeTimeOut {
     NSLog(@"绑定锁时，连接超时");
+    myDelegate.bleConnected = NO;
     myDelegate.blestatusLb.text = @"disconnected";
     myDelegate.blestatusLb.textColor = [UIColor darkTextColor];
+    myDelegate.blestatusLb_dfu.text = @"disconnected";
+    myDelegate.blestatusLb_dfu.textColor = [UIColor darkTextColor];
 }
 
 //自动连接成功
@@ -184,11 +233,15 @@ extern IOAppDelegate *myDelegate;
     myDelegate.resultTV.text = [NSString stringWithFormat:@"%@", dict];
     if ([dict objectForKey:@"lockMac"]) {
         
+        myDelegate.bleConnected = YES;
         myDelegate.blestatusLb.text = @"Connected";
         myDelegate.blestatusLb.textColor = [UIColor blueColor];
+        myDelegate.blestatusLb_dfu.text = @"Connected";
+        myDelegate.blestatusLb_dfu.textColor = [UIColor blueColor];
         
         //自动连接成功，获取锁的相关属性
         [[SinovoBle sharedBLE] getLockInfo :2 :myDelegate.lockSno];
+        [[SinovoBle sharedBLE] getLockInfo :4 :myDelegate.lockSno];
     }
 }
 
