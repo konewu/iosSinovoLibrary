@@ -2,7 +2,7 @@ PODS:
   - IMSLog (1.0.8)
   - iOSDFULibrary (4.10.3):
     - ZIPFoundation (= 0.9.11)
-  - iosSinovoLibrary (0.3.0):
+  - iosSinovoLibrary (1.0.1):
     - iOSDFULibrary (~> 4.10.3)
     - IotLinkKit (~> 1.2.1)
   - IotLinkKit (1.2.2):
@@ -27,7 +27,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   IMSLog: d17ae9fa27c5a31ef5a76ed4e233fd4c89404508
   iOSDFULibrary: 7aade51a907d01ca9a87055003cd232b09efd78f
-  iosSinovoLibrary: 43023f549080670b53152cc397be24d613fb8957
+  iosSinovoLibrary: c56563af487e94daf66b4cece959aec3cf3e9b7a
   IotLinkKit: 0ee37f86a8af9e0437e3037800fdd98d9100a9eb
   ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
 
